@@ -1,0 +1,135 @@
+{
+    "code": "en",
+    "name": "English",
+    "nativeName": "English",
+    "flag": "us",
+    "translator": ["ponlponl123"],
+    "tags": {
+        "f2p": "Free to Play Only!",
+        "shared_bp": "Shared Blueprint with Team Leader",
+        "vanilla": "Vanilla+",
+        "auto_restart": "Automatically restart everyday at 4:50 AM (UTC+7)"
+    },
+    "header": {
+        "navigate": {
+            "news": "News",
+            "about": "About",
+            "status": "Status"
+        },
+        "action": {
+            "play_rusthai": "Play Rusthai",
+            "buy_rust": "Buy Rust"
+        }
+    },
+    "home": {
+        "hero_words": [
+            "Explore",
+            "Build",
+            "Survive"
+        ],
+        "description": "The only aim in Rust is to survive. Everything wants you to die - the island’s wildlife and other inhabitants, the environment, other survivors. Do whatever it takes to last another night.",
+        "play_rusthai": "Get me into!",
+        "buy_rust": "Buy Rust"
+    },
+    "news": {
+        "title": "News",
+        "description": "Latest news and updates about Rusthai.",
+        "stayuptodate": "Stay up to date",
+        "category": {
+            "recent": "Recent",
+            "category": "Category",
+            "all": "All",
+            "tags": {
+                "news": "News",
+                "update": "Update",
+                "community": "Community",
+                "event": "Event",
+                "general": "General",
+                "other": "Other"
+            }
+        },
+        "actions": {
+            "read_more": "Read more",
+            "read_all": "Read all",
+            "join_discord": "Join our Discord community"
+        }
+    },
+    "about": {
+        "title": "About us/Rusthai",
+        "sections": {
+            "1": {
+                "title": "We're dedicated community server provider for Rust in Thailand.",
+                "description": "Our mission is to provide a stable and enjoyable gaming experience for all players. We believe in the power of community and strive to create a welcoming environment for everyone."
+            },
+            "2": {
+                "title": "Why we should do this without any purchase?",
+                "description": "We believe that everyone should have access to a great gaming experience without having to spend money. That's why we offer our servers for free, supported by donations and community contributions. We are committed to keeping our servers running smoothly and providing the best possible experience for our players. Thank you for being a part of our community!"
+            },
+            "3": {
+                "title": "What's is ways to support us?",
+                "description": "You can support us by joining our community and playing on our server. We are always looking for ways to improve and grow, so please feel free to reach out with any feedback or suggestions.",
+                "buymeacoffee": "Or buy me some a cup of coffee!"
+            },
+            "ponlponl123": "Everything I create comes from me and should be free for everyone, without any purchase."
+        }
+    },
+    "status": {
+        "title": "Status",
+        "last_updated": "Last updated",
+        "refreshing": "Refreshing...",
+        "actions": {
+            "refresh": "Refresh",
+            "retry": "Retry"
+        },
+        "state": {
+            "up": {
+                "title": "Great!",
+                "description": "The server is currently online and running smoothly."
+            },
+            "down": {
+                "title": "Error",
+                "key": "Down",
+                "description": "Unable to fetch server status. Please try again later."
+            }
+        }
+    },
+    "play": {
+        "title": "Rust is starting...",
+        "description": "Rust is starting and it will connect to Rusthai automaticly.",
+        "actions": {
+            "open_rust": "Open Rust",
+            "connecting": "Connecting to Rusthai...",
+            "failed": "Failed to Connect to Rusthai.",
+            "connect": "Connect to Rusthai"
+        }
+    },
+    "discord": {
+        "title": "Discord is openning...",
+        "description": "If automatic redirecting not working, you can manually click \"Open with discord\" button.",
+        "action": "Open with discord"
+    },
+    "not_found": {
+        "title": "The page you are looking for does not exist.",
+        "description": "Please check the URL or return to the homepage.",
+        "actions": {
+            "go_home": "Go home",
+            "go_back": "Go back"
+        }
+    },
+    "footer": {
+        "brand": "Rusthai",
+        "description": "Rusthai is dedicated community server for Rust in Thailand.\nOur mission is to provide a fun and engaging environment for players to enjoy the game as free-for-everyone.",
+        "support": "You can support us by joining our community and playing on our server. We are always looking for ways to improve and grow, so please feel free to reach out with any feedback or suggestions. Or buy me some a cup of coffee!",
+        "service_status": "Service Status",
+        "navigate": {
+            "news": "News",
+            "about": "About",
+            "status": "Status"
+        },
+        "actions": {
+            "play_rusthai": "Play Rusthai",
+            "change_language": "Change Language"
+        },
+        "copyright": "All rights reserved."
+    }
+}

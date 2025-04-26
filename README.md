@@ -1,1 +1,1 @@
-# nextjs-website
+# Rusthai NextJS

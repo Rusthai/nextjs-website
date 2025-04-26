@@ -1,0 +1,135 @@
+{
+    "code": "ja",
+    "name": "日本語",
+    "nativeName": "日本語",
+    "flag": "jp",
+    "translator": ["ponlponl123"],
+    "tags": {
+        "f2p": "無料プレイのみ！",
+        "shared_bp": "チームリーダーと設計図を共有",
+        "vanilla": "バニラ+",
+        "auto_restart": "毎日 04:50 (UTC+7) に自動再起動"
+    },
+    "header": {
+        "navigate": {
+            "news": "ニュース",
+            "about": "について",
+            "status": "ステータス"
+        },
+        "action": {
+            "play_rusthai": "Rusthaiをプレイ",
+            "buy_rust": "Rustを購入"
+        }
+    },
+    "home": {
+        "hero_words": [
+            "探検",
+            "構築",
+            "生き残る"
+        ],
+        "description": "Rustにおける唯一の目標は生き残ることです。島の野生生物やその他の生き物、環境、そして他の生存者など、すべてがあなたを殺そうとします。なんとかしてもう一晩生き残りましょう。",
+        "play_rusthai": "Rusthaiへ連れて行って！",
+        "buy_rust": "Rustを購入"
+    },
+    "news": {
+        "title": "ニュース",
+        "description": "Rusthaiに関する最新ニュースとアップデート",
+        "stayuptodate": "最新情報を入手",
+        "category": {
+            "recent": "最新",
+            "category": "カテゴリ",
+            "all": "すべて",
+            "tags": {
+                "news": "ニュース",
+                "update": "アップデート",
+                "community": "コミュニティ",
+                "event": "イベント",
+                "general": "一般",
+                "other": "その他"
+            }
+        },
+        "actions": {
+            "read_more": "もっと読む",
+            "read_all": "すべて読む",
+            "join_discord": "Discordコミュニティに参加"
+        }
+    },
+    "about": {
+        "title": "私たちについて / Rusthai",
+        "sections": {
+            "1": {
+                "title": "私たちはタイのRustに特化したコミュニティサーバープロバイダーです。",
+                "description": "私たちの使命は、すべてのプレイヤーに安定した楽しいゲーム体験を提供することです。私たちはコミュニティの力を信じており、すべての人にとって友好的な環境を作ることに尽力しています。"
+            },
+            "2": {
+                "title": "なぜ利益を追求しないのですか？",
+                "description": "すべての人がお金をかけずに素晴らしいゲーム体験にアクセスできるべきだと信じています。だからこそ、私たちは寄付とコミュニティの支援によって支えられている無料サーバーを提供しています。私たちはサーバーをスムーズに稼働させ、プレイヤーに最高のエクスペリエンスを提供することに尽力しています。コミュニティの一員となってくれてありがとうございます！"
+            },
+            "3": {
+                "title": "サポートする方法はありますか？",
+                "description": "コミュニティに参加し、サーバーでプレイすることで私たちをサポートできます。私たちは常に改善と成長の方法を探していますので、フィードバックや提案があれば遠慮なくご連絡ください。",
+                "buymeacoffee": "または、私にコーヒーを買ってください！"
+            },
+            "ponlponl123": "私がコミュニティのために作ったものはすべて、すべての人が無料で利用できる必要があります。"
+        }
+    },
+    "status": {
+        "title": "ステータス",
+        "last_updated": "最終更新",
+        "refreshing": "更新中...",
+        "actions": {
+            "refresh": "更新",
+            "retry": "再試行"
+        },
+        "state": {
+            "up": {
+                "title": "素晴らしい！",
+                "description": "サーバーは現在オンラインでスムーズに実行されています。"
+            },
+            "down": {
+                "title": "エラーが発生しました",
+                "key": "ダウン",
+                "description": "サーバーの状態を取得できませんでした。後でもう一度お試しください。"
+            }
+        }
+    },
+    "play": {
+        "title": "Rustを起動しています...",
+        "description": "Rustが起動しており、自動的にRusthaiに接続します。",
+        "actions": {
+            "open_rust": "Rustを開く",
+            "connecting": "Rusthaiに接続中...",
+            "failed": "Rusthaiに接続できませんでした",
+            "connect": "Rusthaiに接続"
+        }
+    },
+    "discord": {
+        "title": "Discordを開いています...",
+        "description": "自動リダイレクトが機能しない場合は、「Discordで開く」ボタンを手動でクリックできます。",
+        "action": "Discordで開く"
+    },
+    "not_found": {
+        "title": "お探しのページは見つかりません",
+        "description": "URLを確認するか、ホームページに戻ってください。",
+        "actions": {
+            "go_home": "ホームページに戻る",
+            "go_back": "戻る"
+        }
+    },
+    "footer": {
+        "brand": "Rusthai",
+        "description": "RusthaiはタイのRustに特化したコミュニティサーバーです。\n私たちの使命は、プレイヤーがゲームを無料で楽しめるような、楽しく魅力的な環境を作ることです。",
+        "support": "コミュニティに参加し、サーバーでプレイすることで私たちをサポートできます。私たちは常に改善と成長の方法を探していますので、フィードバックや提案があれば遠慮なくご連絡ください。または、私にコーヒーを買ってください！",
+        "service_status": "サービスステータス",
+        "navigate": {
+            "news": "ニュース",
+            "about": "について",
+            "status": "ステータス"
+        },
+        "actions": {
+            "play_rusthai": "Rusthaiをプレイ",
+            "change_language": "言語を変更"
+        },
+        "copyright": "全著作権所有"
+    }
+}

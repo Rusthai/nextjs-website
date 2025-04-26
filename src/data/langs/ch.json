@@ -1,0 +1,135 @@
+{
+    "code": "zh-CN",
+    "name": "简体中文",
+    "nativeName": "简体中文",
+    "flag": "cn",
+    "translator": ["ponlponl123"],
+    "tags": {
+        "f2p": "仅限免费游玩！",
+        "shared_bp": "与队长分享蓝图",
+        "vanilla": "原版+",
+        "auto_restart": "每日 04:50 (UTC+7) 自动重启"
+    },
+    "header": {
+        "navigate": {
+            "news": "新闻",
+            "about": "关于",
+            "status": "状态"
+        },
+        "action": {
+            "play_rusthai": "游玩 Rusthai",
+            "buy_rust": "购买 Rust"
+        }
+    },
+    "home": {
+        "hero_words": [
+            "探索",
+            "建造",
+            "生存"
+        ],
+        "description": "在 Rust 中唯一的目标就是生存。岛上的野生动物、其他生物、环境以及其他幸存者，一切都想要你的命。竭尽全力再活过一晚。",
+        "play_rusthai": "带我去 Rusthai！",
+        "buy_rust": "购买 Rust"
+    },
+    "news": {
+        "title": "新闻",
+        "description": "有关 Rusthai 的最新新闻和更新",
+        "stayuptodate": "保持最新状态",
+        "category": {
+            "recent": "最新",
+            "category": "类别",
+            "all": "全部",
+            "tags": {
+                "news": "新闻",
+                "update": "更新",
+                "community": "社区",
+                "event": "活动",
+                "general": "一般",
+                "other": "其他"
+            }
+        },
+        "actions": {
+            "read_more": "阅读更多",
+            "read_all": "阅读全部",
+            "join_discord": "加入我们的 Discord 社区"
+        }
+    },
+    "about": {
+        "title": "关于我们 / Rusthai",
+        "sections": {
+            "1": {
+                "title": "我们是泰国一个致力于 Rust 的社区服务器提供商。",
+                "description": "我们的使命是为所有玩家提供稳定和愉快的游戏体验。我们相信社区的力量，并致力于为每个人创造一个友好的环境。"
+            },
+            "2": {
+                "title": "我们为什么不追求利润？",
+                "description": "我们相信每个人都应该能够免费获得优质的游戏体验。这就是为什么我们免费提供我们的服务器，这得益于社区的捐赠和支持。我们致力于保持服务器平稳运行，并为我们的玩家提供最佳体验。感谢您成为我们社区的一员！"
+            },
+            "3": {
+                "title": "有什么方法可以支持我们吗？",
+                "description": "您可以通过加入我们的社区并在我们的服务器上玩游戏来支持我们。我们一直在寻找改进和成长的方法，所以如果您有任何反馈或建议，请随时与我们联系。",
+                "buymeacoffee": "或者给我买杯咖啡！"
+            },
+            "ponlponl123": "我为社区创造的一切都必须对所有人免费"
+        }
+    },
+    "status": {
+        "title": "状态",
+        "last_updated": "上次更新",
+        "refreshing": "正在刷新...",
+        "actions": {
+            "refresh": "刷新",
+            "retry": "重试"
+        },
+        "state": {
+            "up": {
+                "title": "太棒了！",
+                "description": "服务器目前在线并运行流畅。"
+            },
+            "down": {
+                "title": "发生错误",
+                "key": "宕机",
+                "description": "无法获取服务器状态。请稍后重试。"
+            }
+        }
+    },
+    "play": {
+        "title": "正在启动 Rust...",
+        "description": "Rust 正在启动，并将自动连接到 Rusthai。",
+        "actions": {
+            "open_rust": "打开 Rust",
+            "connecting": "正在连接到 Rusthai...",
+            "failed": "无法连接到 Rusthai",
+            "connect": "连接到 Rusthai"
+        }
+    },
+    "discord": {
+        "title": "正在打开 Discord...",
+        "description": "如果自动重定向不起作用，您可以手动点击“用 Discord 打开”按钮。",
+        "action": "用 Discord 打开"
+    },
+    "not_found": {
+        "title": "您查找的页面不存在",
+        "description": "请检查 URL 或返回主页。",
+        "actions": {
+            "go_home": "返回主页",
+            "go_back": "返回"
+        }
+    },
+    "footer": {
+        "brand": "Rusthai",
+        "description": "Rusthai 是泰国一个专门的 Rust 社区服务器。\n我们的使命是为玩家创造一个有趣且引人入胜的环境，让所有人都能免费享受游戏。",
+        "support": "您可以通过加入我们的社区并在我们的服务器上玩游戏来支持我们。我们一直在寻找改进和成长的方法，所以如果您有任何反馈或建议，请随时与我们联系。或者给我买杯咖啡！",
+        "service_status": "服务状态",
+        "navigate": {
+            "news": "新闻",
+            "about": "关于",
+            "status": "状态"
+        },
+        "actions": {
+            "play_rusthai": "游玩 Rusthai",
+            "change_language": "更改语言"
+        },
+        "copyright": "保留所有权利"
+    }
+}

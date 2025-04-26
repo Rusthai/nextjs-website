@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+/* fallback */
+@font-face {
+  font-family: 'Material Symbols Rounded';
+  font-style: normal;
+  font-weight: 100 700;
+  src: url(https://fonts.gstatic.com/s/materialsymbolsrounded/v242/sykg-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190Fjzag.woff2) format('woff2');
+}
+
+.material-symbols-rounded {
+  font-family: 'Material Symbols Rounded';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+  /* --background: #ffffff;
+  --foreground: #171717; */
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+*:not(
+  [data-pc-section="panel"]
+), .hero-animate {
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+*:active, .hero-animate:active {
+  transition-duration: .06s;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-chakra-petch), var(--font-syne-mono), sans-serif;
+}
+body:after {
+  background-image: url(https://files.facepunch.com/garry/1b1011b1/test.png?1=);
+  content: " ";
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 500;
+  pointer-events: none;
+  opacity: .6;
+}
+
+.dark-bar-pattern {
+  background-color: #1f1f1f;
+  height: 53px;
+  mask-image: url("https://files.facepunch.com/lewis/1b0311b1/bar-dark.svg");
+  mask-repeat: repeat-x;
+  width: 100%;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .header ul li {
+    margin: 0;
+  }
+  .header .navlink {
+    width: 100%;
+  }
+}

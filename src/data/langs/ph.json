@@ -1,0 +1,135 @@
+{
+    "code": "fil",
+    "name": "Filipino",
+    "nativeName": "Filipino",
+    "flag": "ph",
+    "translator": ["ponlponl123"],
+    "tags": {
+        "f2p": "Libreng Laruin Lamang!",
+        "shared_bp": "Ibahagi ang blueprint sa team leader",
+        "vanilla": "Vanilla+",
+        "auto_restart": "Awtomatikong magre-restart araw-araw ng 04:50 (UTC+7)"
+    },
+    "header": {
+        "navigate": {
+            "news": "Balita",
+            "about": "Tungkol",
+            "status": "Status"
+        },
+        "action": {
+            "play_rusthai": "Maglaro ng Rusthai",
+            "buy_rust": "Bilhin ang Rust"
+        }
+    },
+    "home": {
+        "hero_words": [
+            "Galugarin",
+            "Magtayo",
+            "Mabuhay"
+        ],
+        "description": "Ang tanging layunin sa Rust ay mabuhay. Gusto ka ng lahat na mamatay - ang wildlife sa isla at iba pang nilalang, ang kapaligiran, iba pang mga survivor. Gawin ang lahat upang mabuhay ng isa pang gabi.",
+        "play_rusthai": "Dalhin mo ako sa Rusthai!",
+        "buy_rust": "Bilhin ang Rust"
+    },
+    "news": {
+        "title": "Balita",
+        "description": "Pinakabagong balita at update tungkol sa Rusthai",
+        "stayuptodate": "Manatiling updated",
+        "category": {
+            "recent": "Kamakailan",
+            "category": "Kategorya",
+            "all": "Lahat",
+            "tags": {
+                "news": "Balita",
+                "update": "Update",
+                "community": "Komunidad",
+                "event": "Kaganapan",
+                "general": "Pangkalahatan",
+                "other": "Iba Pa"
+            }
+        },
+        "actions": {
+            "read_more": "Magbasa pa",
+            "read_all": "Basahin lahat",
+            "join_discord": "Sumali sa aming Discord community"
+        }
+    },
+    "about": {
+        "title": "Tungkol sa Amin / Rusthai",
+        "sections": {
+            "1": {
+                "title": "Kami ay isang community server provider na nakatuon sa Rust sa Thailand.",
+                "description": "Ang aming misyon ay magbigay ng stable at masayang karanasan sa paglalaro para sa lahat ng manlalaro. Naniniwala kami sa kapangyarihan ng komunidad at nakatuon kami sa pagbuo ng isang palakaibigang kapaligiran para sa lahat."
+            },
+            "2": {
+                "title": "Bakit namin ginagawa ito nang walang tubo?",
+                "description": "Naniniwala kami na ang bawat isa ay dapat magkaroon ng access sa isang mahusay na karanasan sa paglalaro nang hindi kinakailangang magbayad. Iyon ang dahilan kung bakit inaalok namin ang aming server nang libre, na sinusuportahan ng mga donasyon at suporta mula sa komunidad. Kami ay nakatuon upang panatilihing maayos ang pagpapatakbo ng aming server at magbigay ng pinakamahusay na karanasan para sa aming mga manlalaro. Salamat sa pagiging bahagi ng aming komunidad!"
+            },
+            "3": {
+                "title": "Mayroon bang mga paraan upang suportahan kami?",
+                "description": "Maaari mo kaming suportahan sa pamamagitan ng pagsali sa aming komunidad at paglalaro sa aming server. Palagi kaming naghahanap ng mga paraan upang mapabuti at lumago, kaya huwag mag-atubiling makipag-ugnayan sa amin kung mayroon kang anumang feedback o mungkahi.",
+                "buymeacoffee": "O kaya'y bilhan mo ako ng kape!"
+            },
+            "ponlponl123": "Lahat ng nililikha ko mula sa sarili ko para sa komunidad ay dapat libre para sa lahat"
+        }
+    },
+    "status": {
+        "title": "Status",
+        "last_updated": "Huling na-update",
+        "refreshing": "Nagre-refresh...",
+        "actions": {
+            "refresh": "Refresh",
+            "retry": "Subukan Muli"
+        },
+        "state": {
+            "up": {
+                "title": "Magaling!",
+                "description": "Ang server ay kasalukuyang online at tumatakbo nang maayos."
+            },
+            "down": {
+                "title": "May Naganap na Error",
+                "key": "Down",
+                "description": "Hindi makuha ang status ng server. Pakisubukang muli mamaya."
+            }
+        }
+    },
+    "play": {
+        "title": "Inilulunsad ang Rust...",
+        "description": "Ang Rust ay inilulunsad at awtomatikong kokonekta sa Rusthai.",
+        "actions": {
+            "open_rust": "Buksan ang Rust",
+            "connecting": "Kumokonekta sa Rusthai...",
+            "failed": "Hindi nakakonekta sa Rusthai",
+            "connect": "Kumonekta sa Rusthai"
+        }
+    },
+    "discord": {
+        "title": "Binubuksan ang Discord...",
+        "description": "Kung hindi gumana ang awtomatikong pag-redirect, maaari mong manual na i-click ang button na \"Buksan gamit ang Discord\".",
+        "action": "Buksan gamit ang Discord"
+    },
+    "not_found": {
+        "title": "Ang pahinang hinahanap mo ay hindi umiiral",
+        "description": "Pakisuri ang URL o bumalik sa homepage.",
+        "actions": {
+            "go_home": "Bumalik sa homepage",
+            "go_back": "Bumalik"
+        }
+    },
+    "footer": {
+        "brand": "Rusthai",
+        "description": "Ang Rusthai ay isang dedikadong community server para sa Rust sa Thailand.\nAng aming misyon ay lumikha ng isang masaya at nakakaengganyong kapaligiran para sa mga manlalaro upang tamasahin ang laro nang libre para sa lahat.",
+        "support": "Maaari mo kaming suportahan sa pamamagitan ng pagsali sa aming komunidad at paglalaro sa aming server. Palagi kaming naghahanap ng mga paraan upang mapabuti at lumago, kaya huwag mag-atubiling makipag-ugnayan sa amin kung mayroon kang anumang feedback o mungkahi. O kaya'y bilhan mo ako ng kape!",
+        "service_status": "Status ng Serbisyo",
+        "navigate": {
+            "news": "Balita",
+            "about": "Tungkol",
+            "status": "Status"
+        },
+        "actions": {
+            "play_rusthai": "Maglaro ng Rusthai",
+            "change_language": "Baguhin ang Wika"
+        },
+        "copyright": "Lahat ng Karapatan ay Nakalaan"
+    }
+}
