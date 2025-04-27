@@ -1,7 +1,7 @@
 # A new journey!
 ## New technology and superior performance in Thailand!
 [banner:/ss_2a8518810024a5fbf9c714e697a43a1201b5d53e.1920x1080.jpg]
-[date:May 1, 2025]
+[date:April 26, 2025]
 
 # Rusthai: A New Journey!
 

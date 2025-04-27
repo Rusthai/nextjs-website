@@ -66,14 +66,14 @@ function Article({ id }: { id: string }) {
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -32 }}
                                 transition={{ duration: 0.42, delay: 0.16 }}
-                                className="text-7xl my-6 font-bold text-white max-sm:text-4xl uppercase"
+                                className="text-7xl my-6 font-bold text-white max-sm:text-4xl uppercase text-center max-w-4xl"
                             >{article.title}</motion.h1>
                             <motion.p
                             initial={{ opacity: 0, y: -32 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -32 }}
                             transition={{ duration: 0.42, delay: 0.32 }}
-                            className="text-base text-white/60"
+                            className="text-base text-white/60 text-center"
                             >{article.description}</motion.p>
                         </>:<HashLoader color="#a0d3f1" size={32} />
                         }

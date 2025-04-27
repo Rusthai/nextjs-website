@@ -57,7 +57,7 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -32 }}
                   transition={{ duration: 0.42, delay: 0.16 }}
-                  className="text-7xl my-6 font-bold text-white max-sm:text-4xl uppercase"
+                  className="text-7xl my-6 font-bold text-white max-sm:text-4xl uppercase text-center max-w-4xl"
                 >{latestNews.latest.content.title}</motion.h1>
               </Link>
               <motion.p
@@ -65,7 +65,7 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -32 }}
                 transition={{ duration: 0.42, delay: 0.32 }}
-                className="text-base text-white/60"
+                className="text-base text-white/60 text-center"
               >{latestNews.latest.content.description}</motion.p>
               <Link href={'/news/'+latestNews.latest.id}>
                 <motion.button
