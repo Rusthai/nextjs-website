@@ -5,6 +5,7 @@ import { HashLoader } from 'react-spinners';
 import { useLanguage } from '@/context/language';
 import Countdown from '@/components/countdown';
 import GameTimer from '@/components/countup';
+import { getTargetDates, isDaytime } from '@/utils/time';
 
 export interface ServerStatus {
   hostname: string;
@@ -29,11 +30,6 @@ export interface StatusRes {
   info?: ServerStatus
 }
 
-export function isDaytime(time: number): boolean {
-  const normalizedTime = time % 24;
-  return normalizedTime >= 6 && normalizedTime < 18;
-}
-
 export default function Status() {
   const { language } = useLanguage();
   const [isLoading, setIsLoading] = React.useState(true);
@@ -44,27 +40,6 @@ export default function Status() {
     language.data.tags.auto_restart
   ]
 
-  function getTargetDates() {
-    const now = new Date();
-  
-    let firstDay = new Date(now.getFullYear(), now.getMonth(), 1);
-    if (now > firstDay) {
-      firstDay = new Date(now.getFullYear(), now.getMonth() + 1, 1);
-    }
-  
-    const daysInMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
-    const middleDay = Math.ceil(daysInMonth / 2);
-    
-    let middleDate = new Date(now.getFullYear(), now.getMonth(), middleDay);
-    if (now > middleDate) {
-      const nextMonthDays = new Date(now.getFullYear(), now.getMonth() + 2, 0).getDate();
-      const nextMiddleDay = Math.ceil(nextMonthDays / 2);
-      middleDate = new Date(now.getFullYear(), now.getMonth() + 1, nextMiddleDay);
-    }
-  
-    return { firstDay, middleDate };
-  }
-  
   const { firstDay, middleDate } = getTargetDates();
   const now = new Date();
   const diffInMs = firstDay.getTime() - now.getTime();
