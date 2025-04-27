@@ -1,8 +1,9 @@
 import en from "@/data/langs/en.json";
 import th from "@/data/langs/th.json";
 import jp from "@/data/langs/jp.json";
-import ph from "@/data/langs/ph.json";
 import ch from "@/data/langs/ch.json";
+import ru from "@/data/langs/ru.json";
+import ph from "@/data/langs/ph.json";
 import my from "@/data/langs/my.json";
 
 export interface Language {
@@ -33,8 +34,9 @@ export const languages: Language[] = [
   { code: en.code, name: en.name, data: en },
   { code: th.code, name: th.name, data: mergeWithEnglish(th) },
   { code: jp.code, name: jp.name, data: mergeWithEnglish(jp) },
-  { code: ph.code, name: ph.name, data: mergeWithEnglish(ph) },
   { code: ch.code, name: ch.name, data: mergeWithEnglish(ch) },
+  { code: ru.code, name: ru.name, data: mergeWithEnglish(ru) },
+  { code: ph.code, name: ph.name, data: mergeWithEnglish(ph) },
   { code: my.code, name: my.name, data: mergeWithEnglish(my) },
 ];
 

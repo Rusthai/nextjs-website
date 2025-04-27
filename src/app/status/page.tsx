@@ -4,13 +4,42 @@ import { motion } from 'motion/react';
 import { HashLoader } from 'react-spinners';
 import { useLanguage } from '@/context/language';
 import Countdown from '@/components/countdown';
+import GameTimer from '@/components/countup';
+
+export interface ServerStatus {
+  hostname: string;
+  players: number;
+  maxplayers: number;
+  sleepers: number;
+  level: string;
+  world: {
+    size: number;
+    seed: number;
+  };
+  version: {
+    io: string;
+  };
+  env: {
+    time: number;
+  };
+}
+
+export interface StatusRes {
+  message: string,
+  info?: ServerStatus
+}
+
+export function isDaytime(time: number): boolean {
+  const normalizedTime = time % 24;
+  return normalizedTime >= 6 && normalizedTime < 18;
+}
 
 export default function Status() {
   const { language } = useLanguage();
   const [isLoading, setIsLoading] = React.useState(true);
   const [isError, setIsError] = React.useState(false);
   const [lastFetchTime, setLastFetchTime] = React.useState<Date | null>(null);
-  const [data, setData] = React.useState<any | null>(null);
+  const [data, setData] = React.useState<StatusRes | null>(null);
   const tags = [
     language.data.tags.auto_restart
   ]
@@ -143,6 +172,16 @@ export default function Status() {
               );
             })
           }
+          {
+            data && data.info &&
+            <motion.span
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -50 }}
+              transition={{ duration: 0.42, delay: (tags.length+2) * 0.2 }}
+              className={"px-4 py-2 rounded-full tracking-wider text-xs bg-emerald-700 text-white"}
+            >{language.data.status.info.players_count.replace('$count',String(data.info.players)).replace('$max',String(data.info.maxplayers))}</motion.span>
+          }
         </motion.div>
       </div>
       <div className='w-full flex justify-center items-center px-4'>
@@ -156,10 +195,10 @@ export default function Status() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 24 }}
-            transition={{ duration: 0.42, delay: (0+2) * 0.2 }}
+            transition={{ duration: 0.42, delay: 2 * 0.2 }}
             className={"p-6 pt-8 rounded-4xl tracking-wider text-xs bg-foreground/10 w-[calc(50%_-_1rem)] max-md:w-full flex flex-col gap-2 relative " + (isMiddleDateHighlight?highlightClassname:'')}
           >
-            <span className='text-xs absolute top-0 left-4 -translate-y-1/2 bg-zinc-900 rounded-lg px-4 py-2 tracking-wider text-white/40'>{language.data.tags.map_wiped} {isMiddleDateHighlight&&<strong className='text-amber-700'>({language.data.tags.upcoming})</strong>}</span>
+            <span className='text-xs absolute top-0 left-0 mx-4 -translate-y-1/2 bg-zinc-900 rounded-lg px-4 py-2 tracking-wider text-white/40'>{language.data.tags.map_wiped} {isMiddleDateHighlight&&<strong className='text-amber-700'>({language.data.tags.upcoming})</strong>}</span>
             <span className='opacity-40 text-xs'>{language.data.status.info.wipe.next_map_wipe}</span>
             <h1 className='font-bold text-xl'>{language.data.utils.time.in} {!isError ? middleDate.toLocaleDateString(language.code, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) : "???"}</h1>
             { !isError && <Countdown targetDate={middleDate} template={language.data.status.info.wipe.timeleft} /> }
@@ -168,14 +207,55 @@ export default function Status() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 24 }}
-            transition={{ duration: 0.42, delay: (0+2) * 0.2 }}
+            transition={{ duration: 0.42, delay: 3 * 0.2 }}
             className={"p-6 pt-8 rounded-4xl tracking-wider text-xs bg-foreground/10 w-[calc(50%_-_1rem)] max-md:w-full flex flex-col gap-2 relative " + (isFirstDayHighlight?highlightClassname:'')}
           >
-            <span className='text-xs absolute top-0 left-4 -translate-y-1/2 bg-zinc-900 rounded-lg px-4 py-2 tracking-wider text-white/40'>{language.data.tags.full_wiped} {isFirstDayHighlight&&<strong className='text-amber-700'>({language.data.tags.upcoming})</strong>}</span>
+            <span className='text-xs absolute top-0 left-0 mx-4 -translate-y-1/2 bg-zinc-900 rounded-lg px-4 py-2 tracking-wider text-white/40'>{language.data.tags.full_wiped} {isFirstDayHighlight&&<strong className='text-amber-700'>({language.data.tags.upcoming})</strong>}</span>
             <span className='opacity-40 text-xs'>{language.data.status.info.wipe.next_full_wipe}</span>
             <h1 className='font-bold text-xl'>{language.data.utils.time.in} {!isError ? firstDay.toLocaleDateString(language.code, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) : "???"}</h1>
             { !isError && <Countdown targetDate={firstDay} template={language.data.status.info.wipe.timeleft} /> }
           </motion.div>
+        </motion.div>
+      </div>
+      <div className='w-full flex justify-center items-center px-4'>
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -50 }}
+          transition={{ duration: 0.42 }}
+          className="mb-4 gap-8 flex flex-wrap w-full max-w-3xl">
+          {
+            data && data.info &&
+            <>
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 24 }}
+                transition={{ duration: 0.42, delay: 4 * 0.2 }}
+                className={"p-8 rounded-4xl tracking-wider text-xs bg-foreground/10 w-[calc(50%_-_1rem)] max-md:w-full flex justify-between items-center gap-2 relative " + (isMiddleDateHighlight?highlightClassname:'')}
+              >
+                <div className='flex flex-col'>
+                  <span className='text-sm'>{language.data.status.info.gametime} (24 {language.data.utils.time.hours})</span>
+                  <GameTimer className="text-5xl font-bold" initialRustTime={data.info.env.time} />
+                </div>
+                <h1 className='font-bold text-6xl'>{ isDaytime(data.info.env.time) ? "🌞" : "🌙" }</h1>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 24 }}
+                transition={{ duration: 0.42, delay: 5 * 0.2 }}
+                className={"p-8 rounded-4xl tracking-wider text-xs bg-foreground/10 w-[calc(50%_-_1rem)] max-md:w-full flex justify-between items-center gap-2 relative " + (isMiddleDateHighlight?highlightClassname:'')}
+              >
+                <div className='flex flex-col'>
+                  <span className='text-sm'>{language.data.status.info.map.title}</span>
+                  <h2 className='font-bold text-lg'>{language.data.status.info.map.size} <span>{data.info.world.size}</span></h2>
+                  <h2 className='font-bold text-lg'>{language.data.status.info.map.seed} <span>{data.info.world.seed}</span></h2>
+                </div>
+                <h1 className='font-bold text-6xl'>🗺️</h1>
+              </motion.div>
+            </>
+          }
         </motion.div>
       </div>
       {

@@ -103,6 +103,14 @@
                 "timeleft": "o sa loob ng $timeleft",
                 "next_full_wipe": "Susunod na Buong Pag-wipe",
                 "next_map_wipe": "Susunod na Pag-wipe ng Mapa"
+            }, 
+            "players_count": "Kasalukuyang naglalaro: $count/$max", 
+            "gametime": "Oras ng Laro", 
+            "mapa": { 
+                "title": "Mapa", 
+                "size": "Size", 
+                "name": "Pangalan", 
+                "seed": "Seed" 
             }
         },
         "state": {

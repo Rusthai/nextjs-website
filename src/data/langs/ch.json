@@ -103,6 +103,14 @@
                 "timeleft": "或在 $timeleft 内",
                 "next_full_wipe": "下一次完整擦拭",
                 "next_map_wipe": "下一次地图擦拭"
+            },
+            "players_count": "当前游戏人数：$count/$max",
+            "gametime": "游戏时间",
+            "map": {
+                "title": "地图",
+                "size": "尺寸",
+                "name": "名称",
+                "seed": "种子"
             }
         },
         "state": {

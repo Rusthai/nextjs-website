@@ -103,6 +103,14 @@
                 "timeleft": "または残り$timeleft",
                 "next_full_wipe": "次回の完全ワイプ",
                 "next_map_wipe": "次回のマップワイプ"
+            },
+            "players_count": "現在プレイ中: $count/$max",
+            "gametime": "ゲーム時間",
+            "map": {
+                "title": "マップ",
+                "size": "サイズ",
+                "name": "名前",
+                "seed": "シード値"
             }
         },
         "state": {

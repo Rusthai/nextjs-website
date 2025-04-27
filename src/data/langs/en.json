@@ -103,6 +103,14 @@
                 "timeleft": "Or in another $timeleft",
                 "next_full_wipe": "Next full wipe",
                 "next_map_wipe": "Next map wipe"
+            },
+            "players_count": "Currently playing: $count / $max",
+            "gametime": "Game Time",
+            "map": {
+                "title": "Map",
+                "size": "Size",
+                "name": "Name",
+                "seed": "Seed"
             }
         },
         "state": {

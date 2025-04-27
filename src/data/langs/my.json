@@ -103,6 +103,14 @@
                 "timeleft": "atau dalam $timeleft",
                 "next_full_wipe": "Padam Penuh Seterusnya",
                 "next_map_wipe": "Padam Peta Seterusnya"
+            }, 
+            "players_count": "Sedang bermain: $count/$max", 
+            "gametime": "Masa Permainan", 
+            "peta": { 
+                "title": "Peta", 
+                "saiz": "Saiz", 
+                "nama": "Nama", 
+                "benih": "Benih" 
             }
         },
         "state": {

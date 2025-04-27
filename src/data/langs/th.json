@@ -103,6 +103,14 @@
                 "timeleft": "หรือในอีก $timeleft",
                 "next_full_wipe": "การล้างข้อมูลทั้งหมดครั้งถัดไป",
                 "next_map_wipe": "การล้างข้อมูลแผนที่ครั้งถัดไป"
+            },
+            "players_count": "กำลังเล่น: $count / $max",
+            "gametime": "เวลาในเกม",
+            "map": {
+                "title": "แผนที่",
+                "size": "ขนาด",
+                "name": "ชื่อ",
+                "seed": "เมล็ด"
             }
         },
         "state": {
