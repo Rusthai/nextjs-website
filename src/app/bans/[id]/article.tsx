@@ -26,7 +26,7 @@ function Article({ id }: { id: string }) {
     const [article, setArticle] = React.useState<BansRes | null>(null);
     const [lang, setLang] = React.useState<string>('');
 
-    const targetArticleLang = article?.languages.filter(reportlang => reportlang.language === language.code || reportlang.language === lang);
+    const targetArticleLang = article?.languages.filter(reportlang => reportlang.language === lang || reportlang.language === language.code);
     const items = article ? article.languages.map(reportlang => ({
         label: reportlang.language.toUpperCase(),
         value: reportlang.language,
