@@ -1,14 +1,31 @@
 {
-    "code": "zh-CN",
-    "name": "简体中文",
-    "nativeName": "简体中文",
+    "code": "zh",
+    "name": "中文",
+    "nativeName": "中文",
     "flag": "cn",
     "translator": ["ponlponl123"],
     "tags": {
         "f2p": "仅限免费游玩！",
-        "shared_bp": "与队长分享蓝图",
+        "shared_bp": "与团队领袖共享蓝图",
         "vanilla": "原版+",
-        "auto_restart": "每日 04:50 (UTC+7) 自动重启"
+        "auto_restart": "每日 04:50 (UTC+7) 自动重启",
+        "full_wiped": "完整擦拭：每月第一天",
+        "map_wiped": "地图擦拭：每月月中",
+        "upcoming": "即将推出"
+    },
+    "utils": {
+        "time": {
+            "hours": "小时",
+            "minutes": "分钟",
+            "seconds": "秒",
+            "ago": "前",
+            "in": "内"
+        },
+        "date": {
+            "months": "个月",
+            "days": "天",
+            "years": "年"
+        }
     },
     "header": {
         "navigate": {
@@ -27,17 +44,17 @@
             "建造",
             "生存"
         ],
-        "description": "在 Rust 中唯一的目标就是生存。岛上的野生动物、其他生物、环境以及其他幸存者，一切都想要你的命。竭尽全力再活过一晚。",
+        "description": "在 Rust 中的唯一目标是生存。岛上的野生动物和其他生物、环境、其他幸存者，一切都想让你死。尽一切努力再活过一个晚上。",
         "play_rusthai": "带我去 Rusthai！",
         "buy_rust": "购买 Rust"
     },
     "news": {
         "title": "新闻",
-        "description": "有关 Rusthai 的最新新闻和更新",
-        "stayuptodate": "保持最新状态",
+        "description": "关于 Rusthai 的最新新闻和更新",
+        "stayuptodate": "保持更新",
         "category": {
             "recent": "最新",
-            "category": "类别",
+            "category": "分类",
             "all": "全部",
             "tags": {
                 "news": "新闻",
@@ -58,19 +75,19 @@
         "title": "关于我们 / Rusthai",
         "sections": {
             "1": {
-                "title": "我们是泰国一个致力于 Rust 的社区服务器提供商。",
-                "description": "我们的使命是为所有玩家提供稳定和愉快的游戏体验。我们相信社区的力量，并致力于为每个人创造一个友好的环境。"
+                "title": "我们是泰国专注于 Rust 的社区服务器提供商。",
+                "description": "我们的使命是为所有玩家提供稳定和愉快的游戏体验。我们相信社区的力量，并致力于为所有人建立一个友好的环境。"
             },
             "2": {
-                "title": "我们为什么不追求利润？",
-                "description": "我们相信每个人都应该能够免费获得优质的游戏体验。这就是为什么我们免费提供我们的服务器，这得益于社区的捐赠和支持。我们致力于保持服务器平稳运行，并为我们的玩家提供最佳体验。感谢您成为我们社区的一员！"
+                "title": "为什么我们是非营利性的？",
+                "description": "我们认为每个人都应该有权无需花费金钱即可获得出色的游戏体验。这就是为什么我们免费提供服务器，并得到社区的捐赠和支持。我们致力于确保服务器平稳运行，并为玩家提供最佳体验。感谢您成为我们社区的一员！"
             },
             "3": {
-                "title": "有什么方法可以支持我们吗？",
-                "description": "您可以通过加入我们的社区并在我们的服务器上玩游戏来支持我们。我们一直在寻找改进和成长的方法，所以如果您有任何反馈或建议，请随时与我们联系。",
+                "title": "有哪些方式可以支持我们？",
+                "description": "您可以通过加入我们的社区并在我们的服务器上玩游戏来支持我们。我们一直在寻找改进和发展的方法，因此如果您有任何反馈或建议，请随时与我们联系。",
                 "buymeacoffee": "或者给我买杯咖啡！"
             },
-            "ponlponl123": "我为社区创造的一切都必须对所有人免费"
+            "ponlponl123": "我创造的一切都源于我为社区服务，它必须对所有人免费。"
         }
     },
     "status": {
@@ -81,21 +98,28 @@
             "refresh": "刷新",
             "retry": "重试"
         },
+        "info": {
+            "wipe": {
+                "timeleft": "或在 $timeleft 内",
+                "next_full_wipe": "下一次完整擦拭",
+                "next_map_wipe": "下一次地图擦拭"
+            }
+        },
         "state": {
             "up": {
                 "title": "太棒了！",
-                "description": "服务器目前在线并运行流畅。"
+                "description": "服务器当前在线并运行顺畅。"
             },
             "down": {
                 "title": "发生错误",
-                "key": "宕机",
-                "description": "无法获取服务器状态。请稍后重试。"
+                "key": "离线",
+                "description": "无法获取服务器状态信息。请稍后再试。"
             }
         }
     },
     "play": {
-        "title": "正在启动 Rust...",
-        "description": "Rust 正在启动，并将自动连接到 Rusthai。",
+        "title": "Rust 正在启动...",
+        "description": "Rust 正在启动并将自动连接到 Rusthai。",
         "actions": {
             "open_rust": "打开 Rust",
             "connecting": "正在连接到 Rusthai...",
@@ -109,7 +133,7 @@
         "action": "用 Discord 打开"
     },
     "not_found": {
-        "title": "您查找的页面不存在",
+        "title": "您要查找的页面不存在",
         "description": "请检查 URL 或返回主页。",
         "actions": {
             "go_home": "返回主页",
@@ -118,8 +142,8 @@
     },
     "footer": {
         "brand": "Rusthai",
-        "description": "Rusthai 是泰国一个专门的 Rust 社区服务器。\n我们的使命是为玩家创造一个有趣且引人入胜的环境，让所有人都能免费享受游戏。",
-        "support": "您可以通过加入我们的社区并在我们的服务器上玩游戏来支持我们。我们一直在寻找改进和成长的方法，所以如果您有任何反馈或建议，请随时与我们联系。或者给我买杯咖啡！",
+        "description": "Rusthai 是泰国专门的 Rust 社区服务器。\n我们的使命是为玩家创造一个有趣且引人入胜的环境，让所有人都可以免费享受游戏。",
+        "support": "您可以通过加入我们的社区并在我们的服务器上玩游戏来支持我们。我们一直在寻找改进和发展的方法，因此如果您有任何反馈或建议，请随时与我们联系。或者给我买杯咖啡！",
         "service_status": "服务状态",
         "navigate": {
             "news": "新闻",
@@ -131,6 +155,6 @@
             "change_language": "更改语言"
         },
         "copyright": "保留所有权利",
-        "disclaim": "我们与 Facepunch、Rust 或 Steam/Valve 没有任何关联。"
+        "disclaim": "我们与 Facepunch、Rust 或 Steam/Valve 无关。"
     }
 }

@@ -5,15 +5,32 @@
     "flag": "my",
     "translator": ["ponlponl123"],
     "tags": {
-        "f2p": "Percuma untuk dimainkan sahaja!",
-        "shared_bp": "Kongsi cetakan biru dengan ketua pasukan",
-        "vanilla": "Vanila+",
-        "auto_restart": "Dimulakan semula secara automatik setiap hari jam 04:50 (UTC+7)"
+        "f2p": "Percuma untuk Dimainkan Sahaja!",
+        "shared_bp": "Kongsi Blueprints dengan Ketua Pasukan",
+        "vanilla": "Vanilla+",
+        "auto_restart": "Restart Automatik Setiap Hari pada 04:50 (UTC+7)",
+        "full_wiped": "Padam Penuh: Hari Pertama Setiap Bulan",
+        "map_wiped": "Padam Peta: Pertengahan Setiap Bulan",
+        "upcoming": "Akan Datang"
+    },
+    "utils": {
+        "time": {
+            "hours": "jam",
+            "minutes": "minit",
+            "seconds": "saat",
+            "ago": "yang lalu",
+            "in": "dalam"
+        },
+        "date": {
+            "months": "bulan",
+            "days": "hari",
+            "years": "tahun"
+        }
     },
     "header": {
         "navigate": {
             "news": "Berita",
-            "about": "Mengenai",
+            "about": "Tentang",
             "status": "Status"
         },
         "action": {
@@ -23,18 +40,18 @@
     },
     "home": {
         "hero_words": [
-            "Jelajah",
+            "Teroka",
             "Bina",
             "Bertahan"
         ],
-        "description": "Satu-satunya matlamat dalam Rust adalah untuk bertahan hidup. Semuanya mahu anda mati - hidupan liar di pulau itu dan makhluk lain, persekitaran, pemain yang selamat lain. Lakukan apa sahaja untuk bertahan satu malam lagi.",
+        "description": "Satu-satunya matlamat di Rust adalah untuk bertahan. Segala-galanya mahu anda mati - hidupan liar di pulau itu dan makhluk lain, persekitaran, pemain lain yang terselamat. Lakukan apa sahaja untuk bertahan satu malam lagi.",
         "play_rusthai": "Bawa saya ke Rusthai!",
         "buy_rust": "Beli Rust"
     },
     "news": {
         "title": "Berita",
         "description": "Berita dan kemas kini terkini mengenai Rusthai",
-        "stayuptodate": "Ikuti perkembangan terkini",
+        "stayuptodate": "Kekal Terkini",
         "category": {
             "recent": "Terbaru",
             "category": "Kategori",
@@ -49,9 +66,9 @@
             }
         },
         "actions": {
-            "read_more": "Baca Lebih Lanjut",
+            "read_more": "Baca Lagi",
             "read_all": "Baca Semua",
-            "join_discord": "Sertai komuniti Discord kami"
+            "join_discord": "Sertai Komuniti Discord Kami"
         }
     },
     "about": {
@@ -59,27 +76,34 @@
         "sections": {
             "1": {
                 "title": "Kami adalah penyedia pelayan komuniti yang berdedikasi untuk Rust di Thailand.",
-                "description": "Misi kami adalah untuk menyediakan pengalaman permainan yang stabil dan menyeronokkan untuk semua pemain. Kami percaya pada kekuatan komuniti dan komited untuk mewujudkan persekitaran yang mesra untuk semua orang."
+                "description": "Misi kami adalah untuk menyediakan pengalaman permainan yang stabil dan menyeronokkan untuk semua pemain. Kami percaya pada kuasa komuniti dan komited untuk membina persekitaran yang mesra untuk semua orang."
             },
             "2": {
-                "title": "Mengapa kami melakukan ini tanpa mencari keuntungan?",
-                "description": "Kami percaya bahawa semua orang harus mempunyai akses kepada pengalaman permainan yang hebat tanpa perlu membayar. Itulah sebabnya kami menawarkan pelayan kami secara percuma, disokong oleh sumbangan dan sokongan komuniti. Kami komited untuk memastikan pelayan kami berjalan lancar dan menyediakan pengalaman terbaik untuk pemain kami. Terima kasih kerana menjadi sebahagian daripada komuniti kami!"
+                "title": "Mengapa kami melakukan ini tanpa keuntungan?",
+                "description": "Kami percaya bahawa setiap orang berhak mendapat akses kepada pengalaman permainan yang hebat tanpa perlu mengeluarkan wang. Itulah sebabnya kami menawarkan pelayan kami secara percuma, disokong oleh sumbangan dan sokongan komuniti. Kami komited untuk memastikan pelayan kami berjalan lancar dan menyediakan pengalaman terbaik untuk pemain kami. Terima kasih kerana menjadi sebahagian daripada komuniti kami!"
             },
             "3": {
-                "title": "Adakah cara untuk menyokong kami?",
-                "description": "Anda boleh menyokong kami dengan menyertai komuniti kami dan bermain di pelayan kami. Kami sentiasa mencari cara untuk menambah baik dan berkembang, jadi jangan ragu untuk menghubungi kami jika anda mempunyai maklum balas atau cadangan.",
-                "buymeacoffee": "Atau belikan saya secawan kopi!"
+                "title": "Apakah cara untuk menyokong kami?",
+                "description": "Anda boleh menyokong kami dengan menyertai komuniti kami dan bermain di pelayan kami. Kami sentiasa mencari cara untuk menambah baik dan membangun, jadi jangan ragu untuk menghubungi kami dengan maklum balas atau cadangan.",
+                "buymeacoffee": "Atau belikan saya kopi!"
             },
-            "ponlponl123": "Segala yang saya cipta dari diri saya untuk komuniti mestilah percuma untuk semua orang"
+            "ponlponl123": "Semua yang saya bina adalah dari saya untuk komuniti, ia mestilah percuma untuk semua orang."
         }
     },
     "status": {
         "title": "Status",
-        "last_updated": "Dikemaskini terakhir",
-        "refreshing": "Sedang menyegar semula...",
+        "last_updated": "Terakhir Dikemaskini",
+        "refreshing": "Menyegarkan semula...",
         "actions": {
-            "refresh": "Segar Semula",
-            "retry": "Cuba lagi"
+            "refresh": "Segarkan Semula",
+            "retry": "Cuba Lagi"
+        },
+        "info": {
+            "wipe": {
+                "timeleft": "atau dalam $timeleft",
+                "next_full_wipe": "Padam Penuh Seterusnya",
+                "next_map_wipe": "Padam Peta Seterusnya"
+            }
         },
         "state": {
             "up": {
@@ -88,49 +112,49 @@
             },
             "down": {
                 "title": "Ralat Berlaku",
-                "key": "Tidak Berfungsi",
-                "description": "Tidak dapat mendapatkan status pelayan. Sila cuba lagi nanti."
+                "key": "Down",
+                "description": "Tidak dapat mengambil maklumat status pelayan. Sila cuba lagi nanti."
             }
         }
     },
     "play": {
-        "title": "Rust sedang dilancarkan...",
-        "description": "Rust sedang dilancarkan dan akan disambungkan secara automatik ke Rusthai.",
+        "title": "Rust Sedang Bermula...",
+        "description": "Rust sedang bermula dan akan bersambung ke Rusthai secara automatik.",
         "actions": {
             "open_rust": "Buka Rust",
-            "connecting": "Sedang menyambung ke Rusthai...",
+            "connecting": "Menyambung ke Rusthai...",
             "failed": "Gagal menyambung ke Rusthai",
             "connect": "Sambung ke Rusthai"
         }
     },
     "discord": {
-        "title": "Discord sedang dibuka...",
-        "description": "Jika pengalihan automatik tidak berfungsi, anda boleh mengklik butang \"Buka dengan Discord\" secara manual.",
+        "title": "Discord Sedang Dibuka...",
+        "description": "Jika pengalihan automatik tidak berfungsi, anda boleh klik butang \"Buka dengan Discord\" secara manual.",
         "action": "Buka dengan Discord"
     },
     "not_found": {
-        "title": "Halaman yang anda cari tidak wujud",
+        "title": "Halaman Yang Anda Cari Tidak Wujud",
         "description": "Sila semak URL atau kembali ke halaman utama.",
         "actions": {
-            "go_home": "Kembali ke halaman utama",
+            "go_home": "Kembali ke Halaman Utama",
             "go_back": "Kembali"
         }
     },
     "footer": {
         "brand": "Rusthai",
-        "description": "Rusthai adalah pelayan komuniti khusus untuk Rust di Thailand.\nMisi kami adalah untuk mewujudkan persekitaran yang menyeronokkan dan menarik untuk pemain menikmati permainan secara percuma untuk semua orang.",
-        "support": "Anda boleh menyokong kami dengan menyertai komuniti kami dan bermain di pelayan kami. Kami sentiasa mencari cara untuk menambah baik dan berkembang, jadi jangan ragu untuk menghubungi kami dengan maklum balas atau cadangan. Atau belikan saya secawan kopi!",
+        "description": "Rusthai adalah pelayan komuniti khusus untuk Rust di Thailand.\nMisi kami adalah untuk mewujudkan persekitaran yang menyeronokkan dan menarik untuk dinikmati oleh pemain secara percuma untuk semua orang.",
+        "support": "Anda boleh menyokong kami dengan menyertai komuniti kami dan bermain di pelayan kami. Kami sentiasa mencari cara untuk menambah baik dan membangun, jadi jangan ragu untuk menghubungi kami dengan maklum balas atau cadangan. Atau belikan saya kopi!",
         "service_status": "Status Perkhidmatan",
         "navigate": {
             "news": "Berita",
-            "about": "Mengenai",
+            "about": "Tentang",
             "status": "Status"
         },
         "actions": {
             "play_rusthai": "Main Rusthai",
             "change_language": "Tukar Bahasa"
         },
-        "copyright": "Semua Hak Cipta Terpelihara",
-        "disclaim": "Kami tidak bergabung dengan Facepunch, Rust atau Steam/Injap."
+        "copyright": "Hak Cipta Terpelihara",
+        "disclaim": "Kami tidak berafiliasi dengan Facepunch, Rust, atau Steam/Valve."
     }
 }
