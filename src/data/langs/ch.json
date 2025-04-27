@@ -71,6 +71,13 @@
             "join_discord": "加入我们的 Discord 社区"
         }
     },
+    "bans_report": {
+        "caseid": "案例ID：",
+        "game_rule": "游戏规则违规诊断报告",
+        "term_of_service": "违反服务政策",
+        "privacy_policy": "违反隐私政策",
+        "cheating": "作弊行为"
+    },
     "about": {
         "title": "关于我们 / Rusthai",
         "sections": {

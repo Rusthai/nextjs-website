@@ -71,6 +71,13 @@
             "join_discord": "Присоединиться к нашему Discord сообществу"
         }
     },
+    "bans_report": {
+        "caseid": "CaseId:",
+        "game_rule": "Отчет о диагностике нарушения правил игры",
+        "term_of_service": "Нарушение политики обслуживания",
+        "privacy_policy": "Нарушение политики конфиденциальности",
+        "cheating": "Нарушения мошенничества"
+    },
     "about": {
         "title": "О нас / Rusthai",
         "sections": {

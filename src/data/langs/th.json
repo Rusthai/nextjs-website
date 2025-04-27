@@ -71,6 +71,13 @@
             "join_discord": "เข้าร่วมชุมชน Discord ของเรา"
         }
     },
+    "bans_report": {
+        "caseid": "รหัสเคส:",
+        "game_rule": "รายงานการวินิจฉัยการละเมิดกฎของเกม",
+        "term_of_service": "การละเมิดนโยบายบริการ",
+        "privacy_policy": "การละเมิดนโยบายความเป็นส่วนตัว",
+        "cheating": "การกระทำผิดฐานโกง"
+    },
     "about": {
         "title": "เกี่ยวกับเรา/Rusthai",
         "sections": {

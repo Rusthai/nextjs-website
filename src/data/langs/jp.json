@@ -71,6 +71,13 @@
             "join_discord": "Discordコミュニティに参加する"
         }
     },
+    "bans_report": {
+        "caseid": "ケースID:",
+        "game_rule": "ゲームルール違反診断レポート",
+        "term_of_service": "サービスポリシー違反",
+        "privacy_policy": "プライバシーポリシー違反",
+        "cheating": "不正行為"
+    },
     "about": {
         "title": "私たちについて / Rusthai",
         "sections": {

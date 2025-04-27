@@ -71,6 +71,13 @@
             "join_discord": "Sertai Komuniti Discord Kami"
         }
     },
+    "bans_report": { 
+        "caseid": "CaseId:", 
+        "game_rule": "Laporan Diagnosis Pelanggaran Peraturan Permainan", 
+        "term_of_service": "Pelanggaran dasar perkhidmatan", 
+        "privacy_policy": "Pelanggaran Dasar Privasi", 
+        "menipu": "Kesalahan menipu" 
+    },
     "about": {
         "title": "Tentang Kami / Rusthai",
         "sections": {

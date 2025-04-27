@@ -71,6 +71,13 @@
             "join_discord": "Join our Discord community"
         }
     },
+    "bans_report": {
+        "caseid": "CaseId:",
+        "game_rule": "Game Rules Violation Diagnosis Report",
+        "term_of_service": "Violation of service policy",
+        "privacy_policy": "Violation of Privacy Policy",
+        "cheating": "Offences of cheating"
+    },
     "about": {
         "title": "About us/Rusthai",
         "sections": {

@@ -71,6 +71,13 @@
             "join_discord": "Sumali sa Aming Discord Community"
         }
     },
+    "bans_report": { 
+        "caseid": "CaseId:", 
+        "game_rule": "Ulat sa Diagnosis ng Paglabag sa Mga Panuntunan ng Laro", 
+        "term_of_service": "Paglabag sa patakaran sa serbisyo", 
+        "privacy_policy": "Paglabag sa Patakaran sa Privacy", 
+        "cheating": "Mga paglabag sa pandaraya" 
+    },
     "about": {
         "title": "Tungkol sa Amin / Rusthai",
         "sections": {
