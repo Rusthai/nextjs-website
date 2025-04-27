@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Chakra_Petch, Syne_Mono } from "next/font/google";
+import NextTopLoader from 'nextjs-toploader';
 import Provider from "./provider";
 import "./globals.css";
 import "primereact/resources/themes/lara-light-cyan/theme.css";
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body
         className={`${chakraPetch.variable} ${syneMono.variable} antialiased`}
       >
+        <NextTopLoader showSpinner={false} />
         <Provider>{children}</Provider>
       </body>
     </html>

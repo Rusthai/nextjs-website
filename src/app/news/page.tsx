@@ -98,20 +98,20 @@ export default function Home() {
         <div className="dark-bar-pattern absolute bottom-0 left-0 !bg-background translate-y-8 w-full !z-20" style={{top:'unset !important'}}></div>
       </motion.div>
       <div className='mt-[48rem]'></div>
-      <div className='w-full flex justify-center items-center'>
-        <div className='w-full max-w-4xl mx-auto flex justify-start items-start min-h-24 gap-2'>
-          <button className="px-6 py-3 text-base font-semibold text-white bg-blue-800 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">{language.data.news.category.recent}</button>
-          <button className="pointer-events-none opacity-40 px-6 py-3 text-base font-semibold text-white bg-zinc-800 rounded-lg shadow-md hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-opacity-50">{language.data.news.category.tags.update}</button>
-          <button className="pointer-events-none opacity-40 px-6 py-3 text-base font-semibold text-white bg-zinc-800 rounded-lg shadow-md hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-opacity-50">{language.data.news.category.tags.community}</button>
-          <button className="pointer-events-none opacity-40 px-6 py-3 text-base font-semibold text-white bg-zinc-800 rounded-lg shadow-md hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-opacity-50">{language.data.news.category.tags.event}</button>
-          <button className="pointer-events-none opacity-40 px-6 py-3 text-base font-semibold text-white bg-zinc-800 rounded-lg shadow-md hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-opacity-50">{language.data.news.category.tags.general}</button>
+      <div className='w-full flex justify-center items-center p-4'>
+        <div className='w-full max-w-4xl mx-auto flex justify-start items-start gap-2 overflow-y-hidden overflow-x-auto' style={{scrollbarWidth:'thin'}}>
+          <button className="min-w-max px-6 py-3 text-base font-semibold text-white bg-blue-800 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">{language.data.news.category.recent}</button>
+          <button className="pointer-events-none opacity-40 min-w-max px-6 py-3 text-base font-semibold text-white bg-zinc-800 rounded-lg shadow-md hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-opacity-50">{language.data.news.category.tags.update}</button>
+          <button className="pointer-events-none opacity-40 min-w-max px-6 py-3 text-base font-semibold text-white bg-zinc-800 rounded-lg shadow-md hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-opacity-50">{language.data.news.category.tags.community}</button>
+          <button className="pointer-events-none opacity-40 min-w-max px-6 py-3 text-base font-semibold text-white bg-zinc-800 rounded-lg shadow-md hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-opacity-50">{language.data.news.category.tags.event}</button>
+          <button className="pointer-events-none opacity-40 min-w-max px-6 py-3 text-base font-semibold text-white bg-zinc-800 rounded-lg shadow-md hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-opacity-50">{language.data.news.category.tags.general}</button>
         </div>
       </div>
       <motion.div className='relative w-full min-h-32 text-white font-bold z-50 px-4 pb-12 mb-18'
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.42, delay: 0.6 }}>
-        <div className='w-full max-w-4xl mx-auto flex flex-wrap justify-start items-start min-h-24 text-center gap-8'>
+        <div className='w-full max-w-4xl mx-auto flex flex-wrap justify-start items-start min-h-24 text-center gap-8 max-md:gap-24'>
         {
           (!loading && latestNews && latestNews.news) ? latestNews.news.map((news, index) => (
             <Link key={index} href={'/news/'+news.id}>
@@ -120,12 +120,13 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.42, delay: index * 0.16 }}
-                className="w-64 flex flex-col justify-center items-center min-h-24 text-start gap-4"
+                className="w-64 flex flex-col justify-start items-start min-h-24 text-start gap-4 max-md:w-full"
               >
                 {
                   news.content.banner &&
-                  <img src={news.content.banner} className='rounded-xl object-cover' />
+                  <div className='rounded-xl overflow-hidden'><motion.img initial={{ scale: 1.3, opacity: 0 }} whileHover={{ scale: 1.2, opacity: 1 }} whileTap={{ scale: 1.1, opacity: 0.9 }} animate={{scale: 1.1, opacity: 0.8}} transition={{ duration: 0.24 }} src={news.content.banner} className='object-cover' /></div>
                 }
+                <h1 className="text-xs text-white py-1 px-3 bg-black/40 tracking-wider flex justify-center items-center gap-3 rounded-full"><span className="material-symbols-rounded !text-base opacity-60">schedule</span> {new Date(news.content.createdAt).toLocaleDateString(language.code, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</h1>
                 <h1 className='text-2xl font-bold w-full'>{news.content.title}</h1>
                 <p className='text-base text-white/60 w-full'>{news.content.description}</p>
               </motion.div>

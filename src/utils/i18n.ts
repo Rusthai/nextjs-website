@@ -8,44 +8,38 @@ import my from "@/data/langs/my.json";
 export interface Language {
   code: string;
   name: string;
-  data: typeof en | typeof th;
+  data: typeof en;
+}
+
+function mergeDeep<T>(target: T, source: Partial<T>): T {
+  const output = { ...target };
+
+  for (const key in source) {
+    if (source[key] && typeof source[key] === "object" && !Array.isArray(source[key])) {
+      output[key] = mergeDeep((target as any)[key], source[key]);
+    } else if (source[key] !== undefined) {
+      (output as any)[key] = source[key];
+    }
+  }
+
+  return output;
+}
+
+function mergeWithEnglish<T extends Partial<any>>(lang: T): typeof en {
+  return mergeDeep(en, lang);
 }
 
 export const languages: Language[] = [
-    {
-        code: en.code,
-        name: en.name,
-        data: en,
-    },
-    {
-        code: th.code,
-        name: th.name,
-        data: { ...en, ...th },
-    },
-    {
-        code: jp.code,
-        name: jp.name,
-        data: {  ...en, ...jp },
-    },
-    {
-        code: ph.code,
-        name: ph.name,
-        data: { ...en, ...ph },
-    },
-    {
-        code: ch.code,
-        name: ch.name,
-        data: { ...en, ...ch },
-    },
-    {
-        code: my.code,
-        name: my.name,
-        data: { ...en, ...my },
-    },
-]
+  { code: en.code, name: en.name, data: en },
+  { code: th.code, name: th.name, data: mergeWithEnglish(th) },
+  { code: jp.code, name: jp.name, data: mergeWithEnglish(jp) },
+  { code: ph.code, name: ph.name, data: mergeWithEnglish(ph) },
+  { code: ch.code, name: ch.name, data: mergeWithEnglish(ch) },
+  { code: my.code, name: my.name, data: mergeWithEnglish(my) },
+];
 
 export const defaultLanguage = languages[0];
 
-export const getLanguageByCode = (code: string) => {
-    return languages.find(lang => lang.code === code) || defaultLanguage;
-}
+export const getLanguageByCode = (code: string): Language => {
+  return languages.find(lang => lang.code === code) || defaultLanguage;
+};

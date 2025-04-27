@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { HashLoader } from 'react-spinners';
 import { useLanguage } from '@/context/language';
+import Countdown from '@/components/countdown';
 
 export default function Status() {
   const { language } = useLanguage();
@@ -11,10 +12,40 @@ export default function Status() {
   const [lastFetchTime, setLastFetchTime] = React.useState<Date | null>(null);
   const [data, setData] = React.useState<any | null>(null);
   const tags = [
-    language.data.tags.auto_restart,
-    language.data.tags.shared_bp,
-    language.data.tags.vanilla
+    language.data.tags.auto_restart
   ]
+
+  function getTargetDates() {
+    const now = new Date();
+  
+    let firstDay = new Date(now.getFullYear(), now.getMonth(), 1);
+    if (now > firstDay) {
+      firstDay = new Date(now.getFullYear(), now.getMonth() + 1, 1);
+    }
+  
+    const daysInMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
+    const middleDay = Math.ceil(daysInMonth / 2);
+    
+    let middleDate = new Date(now.getFullYear(), now.getMonth(), middleDay);
+    if (now > middleDate) {
+      const nextMonthDays = new Date(now.getFullYear(), now.getMonth() + 2, 0).getDate();
+      const nextMiddleDay = Math.ceil(nextMonthDays / 2);
+      middleDate = new Date(now.getFullYear(), now.getMonth() + 1, nextMiddleDay);
+    }
+  
+    return { firstDay, middleDate };
+  }
+  
+  const { firstDay, middleDate } = getTargetDates();
+  const now = new Date();
+  const diffInMs = firstDay.getTime() - now.getTime();
+  const diffInDays = diffInMs / (1000 * 60 * 60 * 24);
+  const diffMDInMs = middleDate.getTime() - now.getTime();
+  const diffMDInDays = diffMDInMs / (1000 * 60 * 60 * 24);
+
+  const isFirstDayHighlight = diffInDays <= 5 && diffInDays >= 0;
+  const isMiddleDateHighlight = diffMDInDays <= 5 && diffMDInDays >= 0;
+  const highlightClassname = '!-order-10 !bg-amber-600/20';
 
   const fetchStatus = async () => {
     try {
@@ -73,7 +104,7 @@ export default function Status() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.99 }}
                 className={
-                  "mt-3 px-4 py-2 text-base font-semibold text-white rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-opacity-50 " +
+                  "mt-3 px-6 py-3 text-base font-semibold text-white rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-opacity-50 " +
                   (isLoading ? 'bg-zinc-600 hover:bg-zinc-700 focus:ring-zinc-500 pointer-events-none opacity-40' : 'bg-blue-600 hover:bg-blue-700 focus:ring-blue-500')
                 }
               >{isLoading?language.data.status.refreshing:language.data.status.actions.refresh}</motion.button>
@@ -82,14 +113,14 @@ export default function Status() {
         </div>
         <div className="dark-bar-pattern absolute bottom-0 left-0 !bg-background translate-y-8 w-full !z-20" style={{top:'unset !important'}}></div>
       </motion.div>
-      <div className='mt-[24rem]'></div>
-      <div className='w-full flex justify-center items-center'>
+      <div className='mt-[25rem]'></div>
+      <div className='w-full flex justify-center items-center px-4'>
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -50 }}
           transition={{ duration: 0.42 }}
-          className="my-4 gap-4 flex flex-wrap w-full max-w-3xl">
+          className="my-4 gap-4 flex flex-wrap w-full max-w-3xl px-4">
           {
             tags.map((tag, index) => {
               return (
@@ -102,6 +133,8 @@ export default function Status() {
                   className={"px-4 py-2 rounded-full tracking-wider text-xs " + (
                     tag === language.data.tags.shared_bp ? "bg-blue-800 text-white" :
                     tag === language.data.tags.vanilla ? "bg-yellow-100 text-black" :
+                    tag === language.data.tags.full_wiped ? "bg-rose-400 text-white" :
+                    tag === language.data.tags.map_wiped ? "bg-emerald-700 text-white" :
                     "bg-stone-900 text-white"
                   )}
                 >
@@ -110,6 +143,39 @@ export default function Status() {
               );
             })
           }
+        </motion.div>
+      </div>
+      <div className='w-full flex justify-center items-center px-4'>
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -50 }}
+          transition={{ duration: 0.42 }}
+          className="my-4 gap-8 flex flex-wrap w-full max-w-3xl">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 24 }}
+            transition={{ duration: 0.42, delay: (0+2) * 0.2 }}
+            className={"p-6 pt-8 rounded-4xl tracking-wider text-xs bg-foreground/10 w-[calc(50%_-_1rem)] max-md:w-full flex flex-col gap-2 relative " + (isMiddleDateHighlight?highlightClassname:'')}
+          >
+            <span className='text-xs absolute top-0 left-4 -translate-y-1/2 bg-zinc-900 rounded-lg px-4 py-2 tracking-wider text-white/40'>{language.data.tags.map_wiped} {isMiddleDateHighlight&&<strong className='text-amber-700'>({language.data.tags.upcoming})</strong>}</span>
+            <span className='opacity-40 text-xs'>{language.data.status.info.wipe.next_map_wipe}</span>
+            <h1 className='font-bold text-xl'>{language.data.utils.time.in} {!isError ? middleDate.toLocaleDateString(language.code, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) : "???"}</h1>
+            { !isError && <Countdown targetDate={middleDate} template={language.data.status.info.wipe.timeleft} /> }
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 24 }}
+            transition={{ duration: 0.42, delay: (0+2) * 0.2 }}
+            className={"p-6 pt-8 rounded-4xl tracking-wider text-xs bg-foreground/10 w-[calc(50%_-_1rem)] max-md:w-full flex flex-col gap-2 relative " + (isFirstDayHighlight?highlightClassname:'')}
+          >
+            <span className='text-xs absolute top-0 left-4 -translate-y-1/2 bg-zinc-900 rounded-lg px-4 py-2 tracking-wider text-white/40'>{language.data.tags.full_wiped} {isFirstDayHighlight&&<strong className='text-amber-700'>({language.data.tags.upcoming})</strong>}</span>
+            <span className='opacity-40 text-xs'>{language.data.status.info.wipe.next_full_wipe}</span>
+            <h1 className='font-bold text-xl'>{language.data.utils.time.in} {!isError ? firstDay.toLocaleDateString(language.code, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) : "???"}</h1>
+            { !isError && <Countdown targetDate={firstDay} template={language.data.status.info.wipe.timeleft} /> }
+          </motion.div>
         </motion.div>
       </div>
       {

@@ -130,6 +130,7 @@
             "play_rusthai": "游玩 Rusthai",
             "change_language": "更改语言"
         },
-        "copyright": "保留所有权利"
+        "copyright": "保留所有权利",
+        "disclaim": "我们与 Facepunch、Rust 或 Steam/Valve 没有任何关联。"
     }
 }

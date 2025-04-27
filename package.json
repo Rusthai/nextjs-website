@@ -17,6 +17,7 @@
     "chart.js": "^4.4.9",
     "motion": "^12.9.1",
     "next": "15.3.1",
+    "nextjs-toploader": "^3.8.16",
     "primereact": "^10.9.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

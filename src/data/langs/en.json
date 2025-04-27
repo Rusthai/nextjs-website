@@ -8,7 +8,24 @@
         "f2p": "Free to Play Only!",
         "shared_bp": "Shared Blueprint with Team Leader",
         "vanilla": "Vanilla+",
-        "auto_restart": "Automatically restart everyday at 4:50 AM (UTC+7)"
+        "auto_restart": "Automatically restart everyday at 4:50 AM (UTC+7)",
+        "full_wiped": "Full Wiped: Monthly",
+        "map_wiped": "Map Wiped: Bi-Weekly",
+        "upcoming": "Upcoming"
+    },
+    "utils": {
+        "time": {
+            "hours": "hours",
+            "minutes": "minutes",
+            "seconds": "seconds",
+            "ago": "ago",
+            "in": "in"
+        },
+        "date": {
+            "months": "months",
+            "days": "days",
+            "years": "years"
+        }
     },
     "header": {
         "navigate": {
@@ -81,6 +98,13 @@
             "refresh": "Refresh",
             "retry": "Retry"
         },
+        "info": {
+            "wipe": {
+                "timeleft": "Or in another $timeleft",
+                "next_full_wipe": "Next full wipe",
+                "next_map_wipe": "Next map wipe"
+            }
+        },
         "state": {
             "up": {
                 "title": "Great!",
@@ -130,6 +154,7 @@
             "play_rusthai": "Play Rusthai",
             "change_language": "Change Language"
         },
-        "copyright": "All rights reserved."
+        "copyright": "All rights reserved.",
+        "disclaim": "We are not affiliated with Facepunch, Rust or Steam/Valve."
     }
 }

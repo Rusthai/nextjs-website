@@ -56,7 +56,7 @@ function Footer() {
 
     return (
         <>
-        <footer className='relative w-full min-h-64 bg-stone-950 text-white font-bold z-50 px-4 mt-8'>
+        <footer className='relative w-full min-h-64 bg-stone-950 text-white font-bold z-50 px-4 py-2 mt-8'>
             <div className="dark-bar-pattern absolute top-0 left-0 !bg-stone-950 -translate-y-8 w-full"></div>
             <div className='w-full max-w-6xl mx-auto flex justify-between items-center min-h-24 gap-6'>
             <div className="flex flex-col space-y-2">
@@ -127,8 +127,9 @@ function Footer() {
                 </div>
             </div>
         </footer>
-        <footer className='w-full flex justify-center items-center h-16 bg-stone-950 brightness-75 text-white font-bold z-50 px-4'>
+        <footer className='w-full flex flex-col justify-center items-center h-16 bg-stone-950 brightness-75 text-white font-bold z-50 px-4'>
             <span className='opacity-10 text-xs'>© 2025 Rusthai. {language.data.footer.copyright}</span>
+            <span className='opacity-10 text-xs'>{language.data.footer.disclaim}</span>
         </footer>
         </>
     )
