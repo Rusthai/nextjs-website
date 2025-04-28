@@ -32,6 +32,7 @@
     "header": {
         "navigate": {
             "news": "新闻",
+            "agreement": "协议",
             "about": "关于",
             "status": "状态"
         },

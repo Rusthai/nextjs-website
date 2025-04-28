@@ -32,6 +32,7 @@
     "header": {
         "navigate": {
             "news": "ニュース",
+            "agreement": "協定",
             "about": "アバウト",
             "status": "ステータス"
         },

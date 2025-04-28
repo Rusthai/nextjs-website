@@ -32,6 +32,7 @@
     "header": {
         "navigate": {
             "news": "Berita",
+            "agreement": "Perjanjian",
             "about": "Tentang",
             "status": "Status"
         },
