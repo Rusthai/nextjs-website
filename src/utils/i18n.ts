@@ -2,6 +2,7 @@ import en from "@/data/langs/en.json";
 import th from "@/data/langs/th.json";
 import jp from "@/data/langs/jp.json";
 import ch from "@/data/langs/ch.json";
+import kr from "@/data/langs/kr.json";
 import ru from "@/data/langs/ru.json";
 import ph from "@/data/langs/ph.json";
 import my from "@/data/langs/my.json";
@@ -35,6 +36,7 @@ export const languages: Language[] = [
   { code: th.code, name: th.name, data: mergeWithEnglish(th) },
   { code: jp.code, name: jp.name, data: mergeWithEnglish(jp) },
   { code: ch.code, name: ch.name, data: mergeWithEnglish(ch) },
+  { code: kr.code, name: kr.name, data: mergeWithEnglish(kr) },
   { code: ru.code, name: ru.name, data: mergeWithEnglish(ru) },
   { code: ph.code, name: ph.name, data: mergeWithEnglish(ph) },
   { code: my.code, name: my.name, data: mergeWithEnglish(my) },

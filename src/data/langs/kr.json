@@ -1,0 +1,207 @@
+{
+    "code": "kr",
+    "name": "Korean",
+    "nativeName": "Korean",
+    "flag": "kr",
+    "translator": [
+        "ponlponl123"
+    ],
+    "tags": {
+        "f2p": "무료 플레이만 가능!",
+        "shared_bp": "팀 리더와 설계도 공유",
+        "vanilla": "바닐라+",
+        "auto_restart": "매일 04:50 AM (UTC+7) 자동 재시작",
+        "full_wiped": "전체 초기화: 매월 첫째 날",
+        "map_wiped": "맵 초기화: 격주",
+        "upcoming": "예정"
+    },
+    "utils": {
+        "time": {
+            "hours": "시간",
+            "minutes": "분",
+            "seconds": "초",
+            "ago": "전",
+            "in": "후"
+        },
+        "date": {
+            "months": "개월",
+            "days": "일",
+            "years": "년"
+        }
+    },
+    "header": {
+        "navigate": {
+            "news": "소식",
+            "agreement": "약관",
+            "about": "소개",
+            "status": "상태"
+        },
+        "action": {
+            "play_rusthai": "Rusthai 플레이",
+            "buy_rust": "Rust 구매"
+        }
+    },
+    "home": {
+        "hero_words": [
+            "탐험",
+            "건설",
+            "생존"
+        ],
+        "description": "Rust의 유일한 목표는 생존입니다. 섬의 야생 동물과 다른 생명체, 환경, 다른 생존자 등 모든 것이 당신을 죽이려 합니다. 또 다른 밤을 살아남기 위해 모든 것을 하세요.",
+        "play_rusthai": "Rusthai로 이동!",
+        "buy_rust": "Rust 구매"
+    },
+    "agreement": {
+        "title": "Rusthai 약관",
+        "description": "본 Rusthai 약관은 게임 플레이, 커뮤니케이션, 커뮤니티, 정책 및 이의 제기 절차를 포함하는 지침 및 규칙입니다. 상호 의무를 이해하기 위해 읽어보십시오.",
+        "last_updated": "$date 마지막 업데이트",
+        "game_rule": {
+            "title": "게임 규칙",
+            "description": "이것은 우리 모두가 알아야 하고 우리와 함께 플레이하기 전에 따라야 하는 규칙이며, 우리가 동의한 규칙입니다."
+        },
+        "communication": {
+            "title": "커뮤니케이션",
+            "description": "게임 내외에서 다른 플레이어와 소통하는 방법입니다. 정중한 언어를 사용하고 서로를 존중하며 불필요한 괴롭힘이나 갈등을 피하십시오."
+        },
+        "community": {
+            "title": "커뮤니티",
+            "description": "우리는 훌륭하고 살기 좋은 Rust 플레이어 커뮤니티를 만들기 위해 노력하고 있습니다. 모두가 친근하고 서로 존중하는 분위기를 조성하는 데 기여합니다. 부적절한 행동을 신고하는 것은 커뮤니티의 질을 유지하는 데 도움이 됩니다."
+        },
+        "our_policies": {
+            "title": "우리의 정책",
+            "description": "이 정책은 Rusthai 서버 서비스 사용 및 개인 정보 처리에 관한 공식적인 이용 약관입니다."
+        },
+        "terms_of_service": "이용 약관",
+        "privacy_policy": "개인 정보 보호 정책",
+        "appeal": {
+            "title": "이의 제기",
+            "description": "잘못되었거나 불공정하게 제재(예: 밴)를 받았다고 생각하는 경우, 팀이 다시 검토하도록 여기에 이의 제기를 제출할 수 있습니다."
+        },
+        "learn_more": "더 알아보기",
+        "contact_us": "문의하기"
+    },
+    "news": {
+        "title": "소식",
+        "description": "Rusthai에 대한 최신 소식 및 업데이트",
+        "stayuptodate": "최신 소식 받기",
+        "category": {
+            "recent": "최신",
+            "category": "카테고리",
+            "all": "전체",
+            "tags": {
+                "news": "소식",
+                "update": "업데이트",
+                "community": "커뮤니티",
+                "event": "이벤트",
+                "general": "일반",
+                "other": "기타"
+            }
+        },
+        "actions": {
+            "read_more": "더 읽기",
+            "read_all": "모두 읽기",
+            "join_discord": "Discord 커뮤니티 가입"
+        }
+    },
+    "bans_report": {
+        "caseid": "사건 ID:",
+        "game_rule": "게임 규칙 위반 진단 보고서",
+        "term_of_service": "서비스 정책 위반",
+        "privacy_policy": "개인 정보 보호 정책 위반",
+        "cheating": "부정행위"
+    },
+    "about": {
+        "title": "소개/Rusthai",
+        "sections": {
+            "1": {
+                "title": "저희는 태국의 Rust 전용 커뮤니티 서버 제공업체입니다.",
+                "description": "저희의 사명은 모든 플레이어에게 안정적이고 즐거운 게임 경험을 제공하는 것입니다. 저희는 커뮤니티의 힘을 믿으며 모두에게 친근한 환경을 조성하기 위해 노력하고 있습니다."
+            },
+            "2": {
+                "title": "왜 저희는 이것을 비영리로 할까요?",
+                "description": "저희는 누구나 비용을 지불하지 않고도 훌륭한 게임 경험에 접근할 수 있어야 한다고 믿습니다. 그래서 저희는 기부와 커뮤니티 지원을 통해 서버를 무료로 제공합니다. 저희는 서버가 원활하게 작동하고 플레이어에게 최고의 경험을 제공하기 위해 최선을 다하고 있습니다. 저희 커뮤니티의 일원이 되어주셔서 감사합니다!"
+            },
+            "3": {
+                "title": "저희를 지원하는 방법이 있나요?",
+                "description": "커뮤니티에 참여하고 저희 서버에서 플레이함으로써 저희를 지원할 수 있습니다. 저희는 항상 개선하고 발전할 방법을 찾고 있으므로 피드백이나 제안이 있으면 언제든지 문의해 주세요.",
+                "buymeacoffee": "또는 커피 한 잔 사주세요!"
+            },
+            "ponlponl123": "제가 커뮤니티를 위해 만든 모든 것은 모두에게 무료여야 합니다."
+        }
+    },
+    "status": {
+        "title": "상태",
+        "last_updated": "마지막 업데이트",
+        "refreshing": "새로 고치는 중...",
+        "actions": {
+            "refresh": "새로 고침",
+            "retry": "다시 시도"
+        },
+        "info": {
+            "wipe": {
+                "timeleft": "또는 $timeleft 후",
+                "next_full_wipe": "다음 전체 초기화",
+                "next_map_wipe": "다음 맵 초기화"
+            },
+            "players_count": "플레이 중: $count / $max",
+            "gametime": "게임 시간",
+            "map": {
+                "title": "맵",
+                "size": "크기",
+                "name": "이름",
+                "seed": "시드"
+            }
+        },
+        "state": {
+            "up": {
+                "title": "훌륭합니다!",
+                "description": "현재 서버가 온라인 상태이며 원활하게 실행되고 있습니다."
+            },
+            "down": {
+                "title": "오류 발생",
+                "key": "다운",
+                "description": "서버 상태를 가져올 수 없습니다. 나중에 다시 시도하십시오."
+            }
+        }
+    },
+    "play": {
+        "title": "Rust 시작 중...",
+        "description": "Rust가 시작되고 Rusthai에 자동으로 연결됩니다.",
+        "actions": {
+            "open_rust": "Rust 열기",
+            "connecting": "Rusthai에 연결 중...",
+            "failed": "Rusthai에 연결 실패",
+            "connect": "Rusthai에 연결"
+        }
+    },
+    "discord": {
+        "title": "Discord 열리는 중...",
+        "description": "자동 리디렉션이 작동하지 않으면 'Discord로 열기' 버튼을 수동으로 클릭할 수 있습니다.",
+        "action": "Discord로 열기"
+    },
+    "not_found": {
+        "title": "찾으시는 페이지가 없습니다",
+        "description": "URL을 확인하거나 홈 페이지로 돌아가십시오.",
+        "actions": {
+            "go_home": "홈 페이지로 이동",
+            "go_back": "뒤로 가기"
+        }
+    },
+    "footer": {
+        "brand": "Rusthai",
+        "description": "Rusthai는 태국의 Rust 전용 커뮤니티 서버입니다.\n저희의 사명은 모든 플레이어가 무료로 게임을 즐길 수 있도록 즐겁고 참여적인 환경을 만드는 것입니다.",
+        "support": "커뮤니티에 참여하고 저희 서버에서 플레이함으로써 저희를 지원할 수 있습니다. 저희는 항상 개선하고 발전할 방법을 찾고 있으므로 피드백이나 제안이 있으면 언제든지 문의해 주세요. 또는 커피 한 잔 사주세요!",
+        "service_status": "서비스 상태",
+        "navigate": {
+            "news": "소식",
+            "about": "소개",
+            "status": "상태"
+        },
+        "actions": {
+            "play_rusthai": "Rusthai 플레이",
+            "change_language": "언어 변경"
+        },
+        "copyright": "모든 권리 보유",
+        "disclaim": "저희는 Facepunch, Rust 또는 Steam/Valve와 관련이 없습니다."
+    }
+}
