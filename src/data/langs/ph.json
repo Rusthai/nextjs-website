@@ -3,7 +3,9 @@
     "name": "Filipino",
     "nativeName": "Filipino",
     "flag": "ph",
-    "translator": ["ponlponl123"],
+    "translator": [
+        "ponlponl123"
+    ],
     "tags": {
         "f2p": "Libre Lang Maglaro!",
         "shared_bp": "Ibahagi ang mga Blueprint sa Team Leader",
@@ -48,6 +50,35 @@
         "play_rusthai": "Dalhin Mo Ako sa Rusthai!",
         "buy_rust": "Bumili ng Rust"
     },
+    "agreement": {
+        "title": "Kasunduan ng Rusthai",
+        "description": "Ang Kasunduan ng Rusthai na ito ay nagbabalangkas ng mga alituntunin at patakaran na sumasaklaw sa gameplay, komunikasyon, komunidad, mga polisiya, at aming proseso ng apela. Pakibasa ito upang maunawaan ang ating mga pinagkasunduan.",
+        "last_updated": "Huling na-update noong $date",
+        "game_rule": {
+            "title": "Mga Panuntunan sa Laro",
+            "description": "Ito ang mga patakaran na dapat nating malaman at sundin bago sumali sa paglalaro sa amin, na siyang mga patakaran na pinagkakasunduan nating lahat."
+        },
+        "communication": {
+            "title": "Komunikasyon",
+            "description": "Mga gabay sa pakikipag-usap sa ibang mga manlalaro, sa loob at labas ng laro. Mangyaring gumamit ng magalang na pananalita, igalang ang isa't isa, at iwasan ang panggigipit o hindi kinakailangang alitan."
+        },
+        "community": {
+            "title": "Komunidad",
+            "description": "Layunin naming bumuo ng isang mabuti at nakakaengganyong komunidad ng mga manlalaro ng Rust. Ang bawat isa ay nag-aambag sa paglikha ng isang palakaibigan at magalang na kapaligiran. Ang pag-uulat ng hindi naaangkop na pag-uugali ay nakakatulong mapanatili ang kalidad ng komunidad."
+        },
+        "our_policies": {
+            "title": "Aming Mga Polisiya",
+            "description": "Ang mga patakarang ito ang opisyal na mga tuntunin at kundisyon tungkol sa paggamit ng mga serbisyo ng Rusthai server at paghawak ng iyong personal na data."
+        },
+        "terms_of_service": "Mga Tuntunin ng Serbisyo",
+        "privacy_policy": "Patakaran sa Privacy",
+        "appeal": {
+            "title": "Apela",
+            "description": "Kung naniniwala kang ikaw ay naparusahan (hal., na-ban) nang hindi tama o hindi makatarungan, maaari kang magsumite ng apela dito para suriin ng team."
+        },
+        "learn_more": "Matuto nang higit pa",
+        "contact_us": "Makipag-ugnay sa amin"
+    },
     "news": {
         "title": "Balita",
         "description": "Pinakabagong balita at mga update tungkol sa Rusthai",
@@ -71,12 +102,12 @@
             "join_discord": "Sumali sa Aming Discord Community"
         }
     },
-    "bans_report": { 
-        "caseid": "CaseId:", 
-        "game_rule": "Ulat sa Diagnosis ng Paglabag sa Mga Panuntunan ng Laro", 
-        "term_of_service": "Paglabag sa patakaran sa serbisyo", 
-        "privacy_policy": "Paglabag sa Patakaran sa Privacy", 
-        "cheating": "Mga paglabag sa pandaraya" 
+    "bans_report": {
+        "caseid": "CaseId:",
+        "game_rule": "Ulat sa Diagnosis ng Paglabag sa Mga Panuntunan ng Laro",
+        "term_of_service": "Paglabag sa patakaran sa serbisyo",
+        "privacy_policy": "Paglabag sa Patakaran sa Privacy",
+        "cheating": "Mga paglabag sa pandaraya"
     },
     "about": {
         "title": "Tungkol sa Amin / Rusthai",
@@ -110,14 +141,14 @@
                 "timeleft": "o sa loob ng $timeleft",
                 "next_full_wipe": "Susunod na Buong Pag-wipe",
                 "next_map_wipe": "Susunod na Pag-wipe ng Mapa"
-            }, 
-            "players_count": "Kasalukuyang naglalaro: $count/$max", 
-            "gametime": "Oras ng Laro", 
-            "mapa": { 
-                "title": "Mapa", 
-                "size": "Size", 
-                "name": "Pangalan", 
-                "seed": "Seed" 
+            },
+            "players_count": "Kasalukuyang naglalaro: $count/$max",
+            "gametime": "Oras ng Laro",
+            "mapa": {
+                "title": "Mapa",
+                "size": "Size",
+                "name": "Pangalan",
+                "seed": "Seed"
             }
         },
         "state": {

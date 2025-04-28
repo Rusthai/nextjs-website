@@ -3,7 +3,9 @@
     "name": "Bahasa Melayu",
     "nativeName": "Bahasa Melayu",
     "flag": "my",
-    "translator": ["ponlponl123"],
+    "translator": [
+        "ponlponl123"
+    ],
     "tags": {
         "f2p": "Percuma untuk Dimainkan Sahaja!",
         "shared_bp": "Kongsi Blueprints dengan Ketua Pasukan",
@@ -48,6 +50,35 @@
         "play_rusthai": "Bawa saya ke Rusthai!",
         "buy_rust": "Beli Rust"
     },
+    "agreement": {
+        "title": "Perjanjian Rusthai",
+        "description": "Perjanjian Rusthai ini menggariskan panduan dan peraturan yang meliputi permainan, komunikasi, komuniti, polisi, dan proses rayuan kami. Sila baca untuk memahami komitmen bersama kita.",
+        "last_updated": "Terakhir dikemas kini pada $date",
+        "game_rule": {
+            "title": "Peraturan Permainan",
+            "description": "Ini adalah peraturan yang patut dan mesti kita ketahui sebelum menyertai kami untuk bermain, yang merupakan peraturan yang kita semua persetujui."
+        },
+        "communication": {
+            "title": "Komunikasi",
+            "description": "Garis panduan untuk berkomunikasi dengan pemain lain, baik di dalam mahupun di luar permainan. Sila gunakan bahasa yang sopan, hormati satu sama lain, dan elakkan gangguan atau konflik yang tidak perlu."
+        },
+        "community": {
+            "title": "Komuniti",
+            "description": "Kami bertujuan untuk membina komuniti pemain Rust yang baik dan mesra. Setiap orang menyumbang kepada penciptaan suasana yang ramah dan saling menghormati. Melaporkan tingkah laku yang tidak wajar membantu mengekalkan kualiti komuniti."
+        },
+        "our_policies": {
+            "title": "Polisi Kami",
+            "description": "Polisi ini adalah terma dan syarat rasmi mengenai penggunaan perkhidmatan pelayan Rusthai dan pengendalian data peribadi anda."
+        },
+        "terms_of_service": "Syarat Perkhidmatan",
+        "privacy_policy": "Dasar Privasi",
+        "appeal": {
+            "title": "Rayuan",
+            "description": "Jika anda percaya anda telah dihukum (cth., diharamkan) secara tidak betul atau tidak adil, anda boleh mengemukakan rayuan di sini untuk disemak oleh pasukan."
+        },
+        "learn_more": "Ketahui lebih lanjut",
+        "contact_us": "Hubungi kami"
+    },
     "news": {
         "title": "Berita",
         "description": "Berita dan kemas kini terkini mengenai Rusthai",
@@ -71,12 +102,12 @@
             "join_discord": "Sertai Komuniti Discord Kami"
         }
     },
-    "bans_report": { 
-        "caseid": "CaseId:", 
-        "game_rule": "Laporan Diagnosis Pelanggaran Peraturan Permainan", 
-        "term_of_service": "Pelanggaran dasar perkhidmatan", 
-        "privacy_policy": "Pelanggaran Dasar Privasi", 
-        "menipu": "Kesalahan menipu" 
+    "bans_report": {
+        "caseid": "CaseId:",
+        "game_rule": "Laporan Diagnosis Pelanggaran Peraturan Permainan",
+        "term_of_service": "Pelanggaran dasar perkhidmatan",
+        "privacy_policy": "Pelanggaran Dasar Privasi",
+        "menipu": "Kesalahan menipu"
     },
     "about": {
         "title": "Tentang Kami / Rusthai",
@@ -110,14 +141,14 @@
                 "timeleft": "atau dalam $timeleft",
                 "next_full_wipe": "Padam Penuh Seterusnya",
                 "next_map_wipe": "Padam Peta Seterusnya"
-            }, 
-            "players_count": "Sedang bermain: $count/$max", 
-            "gametime": "Masa Permainan", 
-            "peta": { 
-                "title": "Peta", 
-                "saiz": "Saiz", 
-                "nama": "Nama", 
-                "benih": "Benih" 
+            },
+            "players_count": "Sedang bermain: $count/$max",
+            "gametime": "Masa Permainan",
+            "peta": {
+                "title": "Peta",
+                "saiz": "Saiz",
+                "nama": "Nama",
+                "benih": "Benih"
             }
         },
         "state": {

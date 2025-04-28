@@ -3,7 +3,9 @@
     "name": "中文",
     "nativeName": "中文",
     "flag": "cn",
-    "translator": ["ponlponl123"],
+    "translator": [
+        "ponlponl123"
+    ],
     "tags": {
         "f2p": "仅限免费游玩！",
         "shared_bp": "与团队领袖共享蓝图",
@@ -47,6 +49,35 @@
         "description": "在 Rust 中的唯一目标是生存。岛上的野生动物和其他生物、环境、其他幸存者，一切都想让你死。尽一切努力再活过一个晚上。",
         "play_rusthai": "带我去 Rusthai！",
         "buy_rust": "购买 Rust"
+    },
+    "agreement": {
+        "title": "Rusthai 协议",
+        "description": "本 Rusthai 协议概述了涵盖游戏玩法、沟通、社区、政策以及我们申诉流程的指南和规则。请阅读以了解我们共同的承诺。",
+        "last_updated": "最后更新于 $date",
+        "game_rule": {
+            "title": "游戏规则",
+            "description": "这些是我们在加入我们一起玩之前应该且必须了解的规则，也是我们所有人都同意的规则。"
+        },
+        "communication": {
+            "title": "沟通交流",
+            "description": "与其他玩家（游戏内和游戏外）沟通的指南。请使用礼貌用语，互相尊重，避免骚扰或不必要的冲突。"
+        },
+        "community": {
+            "title": "社区",
+            "description": "我们致力于建立一个良好且受欢迎的 Rust 玩家社区。每个人都为营造友好和尊重的氛围做出贡献。举报不当行为有助于维护社区质量。"
+        },
+        "our_policies": {
+            "title": "我们的政策",
+            "description": "这些政策是关于使用 Rusthai 服务器服务和处理您个人数据的官方条款和条件。"
+        },
+        "terms_of_service": "服务条款",
+        "privacy_policy": "隐私政策",
+        "appeal": {
+            "title": "申诉",
+            "description": "如果您认为自己受到不当或不公平的处罚（例如：封禁），您可以在此处提交申诉，供团队审核。"
+        },
+        "learn_more": "了解更多",
+        "contact_us": "联系我们"
     },
     "news": {
         "title": "新闻",

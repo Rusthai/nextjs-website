@@ -58,39 +58,45 @@ function Footer() {
         <>
         <footer className='relative w-full min-h-64 bg-stone-950 text-white font-bold z-50 px-4 py-2 mt-8'>
             <div className="dark-bar-pattern absolute top-0 left-0 !bg-stone-950 -translate-y-8 w-full"></div>
-            <div className='w-full max-w-6xl mx-auto flex justify-between items-center min-h-24 gap-6'>
-            <div className="flex flex-col space-y-2">
-                <div className="flex items-center space-x-2">
-                    <img width={48} height={48} className='rounded-lg' src={'/icon.png'} alt='Rusthai'/>
-                    <span className='text-5xl'>{language.data.footer.brand}</span>
-                </div>
-                <div>
-                    <p className='text-xs font-light opacity-40 max-w-lg mt-2'>{language.data.footer.description}<br/><br/>{language.data.footer.support}</p>
-                    <div className="flex gap-4">
-                        <Link href={'https://www.buymeacoffee.com/ponlponl123'} target='_blank'>
-                        <motion.button
-                            initial={{ scale: 1 }}
-                            whileHover={{ scale: 1.02 }}
-                            whileTap={{ scale: 0.99 }}
-                            className="mt-3 px-3 py-2 text-xs font-semibold text-white bg-orange-600 rounded-lg shadow-md hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50"
-                        >Buy me a coffee!</motion.button>
-                        </Link>
+            <div className='w-full max-w-6xl mx-auto flex max-md:flex-col md:justify-between md:items-center min-h-24 gap-6'>
+                <div className="flex flex-col space-y-2">
+                    <div className="flex items-center space-x-2">
+                        <img width={48} height={48} className='rounded-lg' src={'/icon.png'} alt='Rusthai'/>
+                        <span className='text-5xl'>{language.data.footer.brand}</span>
+                    </div>
+                    <div>
+                        <p className='text-xs font-light opacity-40 max-w-lg mt-2'>{language.data.footer.description}<br/><br/>{language.data.footer.support}</p>
+                        <div className="flex gap-4">
+                            <Link href={'https://www.buymeacoffee.com/ponlponl123'} target='_blank'>
+                            <motion.button
+                                initial={{ scale: 1 }}
+                                whileHover={{ scale: 1.02 }}
+                                whileTap={{ scale: 0.99 }}
+                                className="mt-3 px-3 py-2 text-xs font-semibold text-white bg-orange-600 rounded-lg shadow-md hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50"
+                            >Buy me a coffee!</motion.button>
+                            </Link>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <ul className="flex items-center space-x-8 max-md:hidden">
-                <li><a href="/news">{language.data.footer.navigate.news}</a></li>
-                <li><a href="/about">{language.data.footer.navigate.about}</a></li>
-                <li><a href="/status">{language.data.footer.navigate.status}</a></li>
-                <li><Link href={'/play'}>
-                    <motion.button
-                        initial={{ scale: 1 }}
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.99 }}
-                        className="px-4 py-2 text-base font-semibold text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-                    >{language.data.footer.actions.play_rusthai}</motion.button>
-                </Link></li>
-            </ul>
+                <div className='flex flex-col gap-4 min-w-max'>
+                    <ul className="flex justify-end items-center text-end space-x-8 max-md:hidden">
+                        <li><a href="/news">{language.data.footer.navigate.news}</a></li>
+                        <li><a href="/about">{language.data.footer.navigate.about}</a></li>
+                        <li><a href="/status">{language.data.footer.navigate.status}</a></li>
+                        <li><Link href={'/play'}>
+                            <motion.button
+                                initial={{ scale: 1 }}
+                                whileHover={{ scale: 1.02 }}
+                                whileTap={{ scale: 0.99 }}
+                                className="px-4 py-2 text-base font-semibold text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                            >{language.data.footer.actions.play_rusthai}</motion.button>
+                        </Link></li>
+                    </ul>
+                    <ul className="flex md:justify-end items-center md:text-end space-x-8">
+                        <li><a href="/agreement/termsofservice" className='text-xs'>{language.data.agreement.terms_of_service}</a></li>
+                        <li><a href="/agreement/privacypolicy" className='text-xs'>{language.data.agreement.privacy_policy}</a></li>
+                    </ul>
+                </div>
             </div>
             <div className='w-full max-w-6xl mx-auto flex justify-between items-center min-h-24 gap-6'>
                 <div className="flex flex-col" id="statusgator-container">

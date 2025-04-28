@@ -3,7 +3,9 @@
     "name": "English",
     "nativeName": "English",
     "flag": "us",
-    "translator": ["ponlponl123"],
+    "translator": [
+        "ponlponl123"
+    ],
     "tags": {
         "f2p": "Free to Play Only!",
         "shared_bp": "Shared Blueprint with Team Leader",
@@ -30,6 +32,7 @@
     "header": {
         "navigate": {
             "news": "News",
+            "agreement": "Agreement",
             "about": "About",
             "status": "Status"
         },
@@ -47,6 +50,35 @@
         "description": "The only aim in Rust is to survive. Everything wants you to die - the island’s wildlife and other inhabitants, the environment, other survivors. Do whatever it takes to last another night.",
         "play_rusthai": "Get me into!",
         "buy_rust": "Buy Rust"
+    },
+    "agreement": {
+        "title": "Rusthai Agreement",
+        "description": "This Rusthai Agreement outlines the guidelines and rules covering gameplay, communication, community, policies, and our appeal process. Please read it to understand our mutual commitments.",
+        "last_updated": "Last updated on $date",
+        "game_rule": {
+            "title": "Game Rules",
+            "description": "These are the rules that we should and must know before joining us to play, which are the rules that we all agree on."
+        },
+        "communication": {
+            "title": "Communication",
+            "description": "Guidelines for communicating with other players, both in-game and out-of-game. Please use polite language, respect each other, and avoid harassment or unnecessary conflict."
+        },
+        "community": {
+            "title": "Community",
+            "description": "We aim to build a good and welcoming Rust player community. Everyone contributes to creating a friendly and respectful atmosphere. Reporting inappropriate behavior helps maintain community quality."
+        },
+        "our_policies": {
+            "title": "Our Policies",
+            "description": "These policies are the official terms and conditions regarding the use of Rusthai server services and the handling of your personal data."
+        },
+        "terms_of_service": "Terms of Service",
+        "privacy_policy": "Privacy Policy",
+        "appeal": {
+            "title": "Appeal",
+            "description": "If you believe you have been penalized (e.g., banned) incorrectly or unfairly, you can submit an appeal here for the team to review."
+        },
+        "learn_more": "Learn more",
+        "contact_us": "Contact us"
     },
     "news": {
         "title": "News",
