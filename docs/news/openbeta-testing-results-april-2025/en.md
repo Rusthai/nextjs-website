@@ -13,15 +13,15 @@ During the 7 days of the Open Beta, approximately **77 players** participated an
 
 * **Distribution by Country:**
     * Thailand: 52 players
-    * Philippines: 10 players
+    * Philippines: 11 players
     * Hong Kong: 5 players
     * Korea: 4 players
+    * Malaysia: 3 player
     * Singapore: 2 players
     * Russia: 2 players
-    * Malaysia: 1 player
     * Nepal: 1 player
 
-    ![pie_chart](/Screenshot%202025-04-29%20200431.png)
+    ![pie_chart](/Screenshot%202025-04-29%20202901.png)
 
 Player latency ranged widely, from **1ms to 215ms**, indicating diverse connections from players both domestically and internationally.
 
@@ -37,7 +37,7 @@ The peak concurrent players occurred between approximately **8:54 PM and 1:00 AM
 
 Regarding server rule enforcement, a total of **10 players** were penalized, representing 100% of the players who received penalties.
 
-* **Country of Penalized Players:** 100% of the penalized players were from the Philippines.
+* **Country of Penalized Players:** 90.9% of the penalized players were from the Philippines.
 * **Reason for Punishment:** 100% of the reasons for punishment were for "Breaking the Game rules", specifically allegations of Teaming or Associating (forming alliances between teams) exceeding 8 members, which violates the server's set limit.
 
 ## **Server Performance and Stability**
