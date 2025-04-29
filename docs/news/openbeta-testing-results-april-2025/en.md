@@ -9,7 +9,7 @@ The Rusthai Community opened our Rust server for public Open Beta testing over t
 
 ## **Player Overview and Geography**
 
-During the 7 days of the Open Beta, approximately **68 players** participated and were recorded, showing a certain level of interest from players.
+During the 7 days of the Open Beta, approximately **75 players** participated and were recorded, showing a certain level of interest from players.
 
 * **Distribution by Country:**
     * Thailand: 52 players
@@ -17,6 +17,7 @@ During the 7 days of the Open Beta, approximately **68 players** participated an
     * Hong Kong: 5 players
     * Korea: 3 players
     * Singapore: 2 players
+    * Russia: 2 players
     * Malaysia: 1 player
 
     ![pie_chart](/Screenshot%202025-04-29%20170931.png)
