@@ -16,6 +16,7 @@ export default function Home() {
   const { language } = useLanguage();
   const [ latestNews, setLatestNews] = React.useState<LatestNews | null>(null);
   const targetNewsLang = latestNews ? (latestNews.latest.content as Record<string, News>)[language.code] ? (latestNews.latest.content as Record<string, News>)[language.code] :
+    (latestNews.latest.content as Record<string, News>)["en"] ? (latestNews.latest.content as Record<string, News>)["en"] :
     (typeof Object.values(latestNews.latest.content as Record<string, News>)[0] !== 'string' && Object.values(latestNews.latest.content as Record<string, News>)[0]) ?
     Object.values(latestNews.latest.content as Record<string, News>)[0] : latestNews.latest.content as News : null;
   const [loading, setLoading] = React.useState(true);
@@ -118,6 +119,7 @@ export default function Home() {
         {
           (!loading && latestNews && latestNews.news) ? latestNews.news.map((news, index) => {
             const targetNews = (news.content as Record<string, News>)[language.code] ? (news.content as Record<string, News>)[language.code] :
+              (news.content as Record<string, News>)["en"] ? (news.content as Record<string, News>)["en"] :
               (typeof Object.values(news.content as Record<string, News>)[0] !== 'string' && Object.values(news.content as Record<string, News>)[0]) ?
               Object.values(news.content as Record<string, News>)[0] :
               news.content as News;

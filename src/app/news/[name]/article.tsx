@@ -19,6 +19,8 @@ function Article({ id }: { id: string }) {
         ? typeof Object.values(article)[0] !== 'string' ?
             (article as NewsResponse[]).filter(news=>news.language === language.code)[0] ?
             (article as NewsResponse[]).filter(news=>news.language === language.code)[0].content :
+            (article as NewsResponse[]).filter(news=>news.language === "en")[0] ?
+            (article as NewsResponse[]).filter(news=>news.language === "en")[0].content :
             (article as NewsResponse[])[0].content :
             (article as News)
         : null;
