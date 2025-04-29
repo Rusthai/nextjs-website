@@ -12,15 +12,14 @@ The Rusthai Community opened our Rust server for public Open Beta testing over t
 During the 7 days of the Open Beta, approximately **68 players** participated and were recorded, showing a certain level of interest from players.
 
 * **Distribution by Country:**
-    * Thailand: 46 players
+    * Thailand: 52 players
     * Philippines: 10 players
     * Hong Kong: 5 players
     * Korea: 3 players
     * Singapore: 2 players
     * Malaysia: 1 player
-    * Russia: 1 player
 
-    ![pie_chart](/Screenshot%202025-04-29%20163102.png)
+    ![pie_chart](/Screenshot%202025-04-29%20170931.png)
 
 Player latency ranged widely, from **1ms to 215ms**, indicating diverse connections from players both domestically and internationally.
 
