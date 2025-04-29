@@ -1,11 +1,11 @@
 "use client"
 import { useLanguage } from '@/context/language';
-import { News } from '@/utils/makeMd';
 import { motion } from 'motion/react';
 import Link from "next/link";
 import React from 'react';
 import { HashLoader } from 'react-spinners';
 import { NewsResponse } from '../api/news/route';
+import { News } from '@/utils/makeMd';
 
 export interface LatestNews {
   latest: NewsResponse;
@@ -15,6 +15,9 @@ export interface LatestNews {
 export default function Home() {
   const { language } = useLanguage();
   const [ latestNews, setLatestNews] = React.useState<LatestNews | null>(null);
+  const targetNewsLang = latestNews ? (latestNews.latest.content as Record<string, News>)[language.code] ? (latestNews.latest.content as Record<string, News>)[language.code] :
+    (typeof Object.values(latestNews.latest.content as Record<string, News>)[0] !== 'string' && Object.values(latestNews.latest.content as Record<string, News>)[0]) ?
+    Object.values(latestNews.latest.content as Record<string, News>)[0] : latestNews.latest.content as News : null;
   const [loading, setLoading] = React.useState(true);
   React.useEffect(() => {
     const fetchLatestNews = async () => {
@@ -30,7 +33,7 @@ export default function Home() {
       } finally {
         setLoading(false);
       }
-    };
+    }
     fetchLatestNews();
   }, []);
   return (
@@ -43,14 +46,14 @@ export default function Home() {
       >
         <div className="absolute w-full h-full bg-gradient-to-t from-zinc-900 to-transparent left-0 bottom-0 z-10 flex flex-col gap-6 justify-center items-center">
           {
-            (!loading && latestNews && latestNews.latest) ? <>
+            (!loading && latestNews && targetNewsLang) ? <>
               <motion.h1
                 initial={{ opacity: 0, y: -32 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -32 }}
                 transition={{ duration: 0.42 }}
                 className="text-sm text-white py-1 px-3 bg-black/40 tracking-wider flex justify-center items-center gap-3 rounded-full"
-              ><span className="material-symbols-rounded !text-base opacity-60">schedule</span> {new Date(latestNews?.latest.content.createdAt).toLocaleDateString(language.code, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</motion.h1>
+              ><span className="material-symbols-rounded !text-base opacity-60">schedule</span> {new Date(targetNewsLang.createdAt).toLocaleDateString(language.code, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</motion.h1>
               <Link href={'/news/'+latestNews.latest.id}>
                 <motion.h1
                   initial={{ opacity: 0, y: -32 }}
@@ -58,7 +61,7 @@ export default function Home() {
                   exit={{ opacity: 0, y: -32 }}
                   transition={{ duration: 0.42, delay: 0.16 }}
                   className="text-7xl my-6 font-bold text-white max-sm:text-4xl uppercase text-center max-w-4xl"
-                >{latestNews.latest.content.title}</motion.h1>
+                >{targetNewsLang.title}</motion.h1>
               </Link>
               <motion.p
                 initial={{ opacity: 0, y: -32 }}
@@ -66,7 +69,7 @@ export default function Home() {
                 exit={{ opacity: 0, y: -32 }}
                 transition={{ duration: 0.42, delay: 0.32 }}
                 className="text-base text-white/60 text-center"
-              >{latestNews.latest.content.description}</motion.p>
+              >{targetNewsLang.description}</motion.p>
               <Link href={'/news/'+latestNews.latest.id}>
                 <motion.button
                   initial={{ opacity: 0, y: 12 }}
@@ -87,12 +90,12 @@ export default function Home() {
           className="absolute top-0 left-0 overflow-hidden w-screen h-full hero-animate"
         >
           {
-            !loading && latestNews?.latest.content.banner &&
+            !loading && targetNewsLang?.banner &&
             <motion.img
               initial={{ scale: 1.3, opacity: 0 }}
               animate={{scale: 1.1, opacity: 1 }}
               transition={{ duration: 0.24, delay: 0.24 }}
-              className="w-full h-full object-cover" src={latestNews?.latest.content.banner} />
+              className="w-full h-full object-cover" src={targetNewsLang.banner} />
           }
         </motion.div>
         <div className="dark-bar-pattern absolute bottom-0 left-0 !bg-background translate-y-8 w-full !z-20" style={{top:'unset !important'}}></div>
@@ -113,25 +116,31 @@ export default function Home() {
         transition={{ duration: 0.42, delay: 0.6 }}>
         <div className='w-full max-w-4xl mx-auto flex flex-wrap justify-start items-start min-h-24 text-center gap-8 max-md:gap-24'>
         {
-          (!loading && latestNews && latestNews.news) ? latestNews.news.map((news, index) => (
-            <Link key={index} href={'/news/'+news.id}>
-              <motion.div
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.42, delay: index * 0.16 }}
-                className="w-64 flex flex-col justify-start items-start min-h-24 text-start gap-4 max-md:w-full"
-              >
-                {
-                  news.content.banner &&
-                  <div className='rounded-xl overflow-hidden'><motion.img initial={{ scale: 1.3, opacity: 0 }} whileHover={{ scale: 1.2, opacity: 1 }} whileTap={{ scale: 1.1, opacity: 0.9 }} animate={{scale: 1.1, opacity: 0.8}} transition={{ duration: 0.24 }} src={news.content.banner} className='object-cover' /></div>
-                }
-                <h1 className="text-xs text-white py-1 px-3 bg-black/40 tracking-wider flex justify-center items-center gap-3 rounded-full"><span className="material-symbols-rounded !text-base opacity-60">schedule</span> {new Date(news.content.createdAt).toLocaleDateString(language.code, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</h1>
-                <h1 className='text-2xl font-bold w-full'>{news.content.title}</h1>
-                <p className='text-base text-white/60 w-full'>{news.content.description}</p>
-              </motion.div>
-            </Link>
-          )) : <HashLoader color="#a0d3f1" size={32} />
+          (!loading && latestNews && latestNews.news) ? latestNews.news.map((news, index) => {
+            const targetNews = (news.content as Record<string, News>)[language.code] ? (news.content as Record<string, News>)[language.code] :
+              (typeof Object.values(news.content as Record<string, News>)[0] !== 'string' && Object.values(news.content as Record<string, News>)[0]) ?
+              Object.values(news.content as Record<string, News>)[0] :
+              news.content as News;
+            return (
+              <Link key={index} href={'/news/'+news.id}>
+                <motion.div
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.42, delay: index * 0.16 }}
+                  className="w-64 flex flex-col justify-start items-start min-h-24 text-start gap-4 max-md:w-full"
+                >
+                  {
+                    targetNews.banner &&
+                    <div className='rounded-xl overflow-hidden'><motion.img initial={{ scale: 1.3, opacity: 0 }} whileHover={{ scale: 1.2, opacity: 1 }} whileTap={{ scale: 1.1, opacity: 0.9 }} animate={{scale: 1.1, opacity: 0.8}} transition={{ duration: 0.24 }} src={targetNews.banner} className='object-cover' /></div>
+                  }
+                  <h1 className="text-xs text-white py-1 px-3 bg-black/40 tracking-wider flex justify-center items-center gap-3 rounded-full"><span className="material-symbols-rounded !text-base opacity-60">schedule</span> {new Date(targetNews.createdAt).toLocaleDateString(language.code, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</h1>
+                  <h1 className='text-2xl font-bold w-full'>{targetNews.title}</h1>
+                  <p className='text-base text-white/60 w-full'>{targetNews.description}</p>
+                </motion.div>
+              </Link>
+            )
+          }) : <HashLoader color="#a0d3f1" size={32} />
         }
         </div>
       </motion.div>

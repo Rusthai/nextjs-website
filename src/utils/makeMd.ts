@@ -4,6 +4,7 @@ export interface News {
   content: string;
   banner: string | null;
   createdAt: string;
+  language?: string;
 }
 
 export function makeMd(content: string, createdAt: Date): News {
@@ -24,10 +25,10 @@ export function makeMd(content: string, createdAt: Date): News {
     const contentWithoutOverride = contentWithoutBanner.replace(overrideDateRegex, "").trim();
 
     return {
-        title: title,
-        description: description,
-        content: contentWithoutOverride,
-        banner: banner,
-        createdAt: overrideDate || createdAt.toISOString()
+      title: title,
+      description: description,
+      content: contentWithoutOverride,
+      banner: banner,
+      createdAt: overrideDate || createdAt.toISOString()
     }
 }

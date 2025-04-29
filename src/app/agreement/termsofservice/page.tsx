@@ -52,22 +52,41 @@ export default function Home() {
         transition={{ duration: 0.42, delay: 0.6 }}>
         <div className='w-full max-w-3xl mx-auto flex flex-col min-h-24 gap-4'>
           <span>{language.data.agreement.last_updated.replace('$date', new Date("April 28, 2025").toLocaleDateString(language.code, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }))}</span>
-          <div className='text-lg text-gray-300/60 max-w-2xl max-sm:text-sm whitespace-break-spaces'>
-          การเข้าถึงและใช้งานเซิร์ฟเวอร์ Rust ของเรา ถือว่าท่านได้ยอมรับและตกลงที่จะปฏิบัติตามข้อกำหนดในการให้บริการนี้ รวมถึงกฎของเซิร์ฟเวอร์ทั้งหมดที่ได้ระบุไว้
-          <br/><br/>
-          ลักษณะของเซิร์ฟเวอร์: เซิร์ฟเวอร์นี้ดำเนินการในรูปแบบของเซิร์ฟเวอร์ชุมชนแบบโอเพนซอร์ส (open-source community server) โดยมีวัตถุประสงค์เพื่อให้ผู้เล่นได้เข้ามามีปฏิสัมพันธ์และเพลิดเพลินกับเกม Rust ร่วมกัน ทีมงานผู้ดูแลเซิร์ฟเวอร์ประกอบด้วยสมาชิกในชุมชนที่สละเวลาและทรัพยากรส่วนตัวในการดูแลและพัฒนา
-          <br/><br/>
-          การปฏิเสธความรับผิดชอบ: เนื่องจากลักษณะของเซิร์ฟเวอร์ที่เป็นโครงการชุมชนและไม่ได้ดำเนินการในเชิงพาณิชย์ เราขอปฏิเสธความรับผิดชอบในความเสียหาย การสูญเสีย หรือปัญหาต่างๆ ที่อาจเกิดขึ้นจากการใช้งานเซิร์ฟเวอร์ในทุกกรณี รวมถึงแต่ไม่จำกัดเพียง:
-          <br/><br/>
-          <ul className='list-disc pl-8 mb-6'>
-            <li className='mb-4'>การสูญหายของไอเท็ม ทรัพยากร หรือความคืบหน้าในเกมไม่ว่าด้วยสาเหตุใดๆ (เช่น ข้อผิดพลาดของเซิร์ฟเวอร์, บัคในเกม, การกระทำของผู้เล่นอื่น)</li>
-            <li className='mb-4'>การหยุดทำงาน (Downtime) หรือความไม่เสถียรของเซิร์ฟเวอร์</li>
-            <li className='mb-4'>ปัญหาที่เกิดจากการปฏิสัมพันธ์ระหว่างผู้เล่น (Player Interaction)</li>
-            <li className='mb-4'>ความเสียหายต่ออุปกรณ์หรือซอฟต์แวร์ของท่านอันเนื่องมาจากการเชื่อมต่อหรือเล่นบนเซิร์ฟเวอร์นี้</li>
-            <li className='mb-4'>ท่านยอมรับความเสี่ยงทั้งหมดที่เกี่ยวข้องกับการเล่นบนเซิร์ฟเวอร์ชุมชนแบบโอเพนซอร์สนี้</li>
-          </ul>
-          การเปลี่ยนแปลงข้อกำหนด: เราขอสงวนสิทธิ์ในการเปลี่ยนแปลง แก้ไข หรือปรับปรุงข้อกำหนดในการให้บริการนี้ได้ตลอดเวลา การใช้งานเซิร์ฟเวอร์อย่างต่อเนื่องหลังจากมีการเปลี่ยนแปลงถือว่าท่านยอมรับข้อกำหนดที่ได้รับการแก้ไขแล้ว
-          </div>
+          {
+            language.code === "th" ?
+            <div className='text-lg text-gray-300/60 max-w-2xl max-sm:text-sm whitespace-break-spaces'>
+              การเข้าถึงและใช้งานเซิร์ฟเวอร์ Rust ของเรา ถือว่าท่านได้ยอมรับและตกลงที่จะปฏิบัติตามข้อกำหนดในการให้บริการนี้ รวมถึงกฎของเซิร์ฟเวอร์ทั้งหมดที่ได้ระบุไว้
+              <br/><br/>
+              ลักษณะของเซิร์ฟเวอร์: เซิร์ฟเวอร์นี้ดำเนินการในรูปแบบของเซิร์ฟเวอร์ชุมชนแบบโอเพนซอร์ส (open-source community server) โดยมีวัตถุประสงค์เพื่อให้ผู้เล่นได้เข้ามามีปฏิสัมพันธ์และเพลิดเพลินกับเกม Rust ร่วมกัน ทีมงานผู้ดูแลเซิร์ฟเวอร์ประกอบด้วยสมาชิกในชุมชนที่สละเวลาและทรัพยากรส่วนตัวในการดูแลและพัฒนา
+              <br/><br/>
+              การปฏิเสธความรับผิดชอบ: เนื่องจากลักษณะของเซิร์ฟเวอร์ที่เป็นโครงการชุมชนและไม่ได้ดำเนินการในเชิงพาณิชย์ เราขอปฏิเสธความรับผิดชอบในความเสียหาย การสูญเสีย หรือปัญหาต่างๆ ที่อาจเกิดขึ้นจากการใช้งานเซิร์ฟเวอร์ในทุกกรณี รวมถึงแต่ไม่จำกัดเพียง:
+              <br/><br/>
+              <ul className='list-disc pl-8 mb-6'>
+                <li className='mb-4'>การสูญหายของไอเท็ม ทรัพยากร หรือความคืบหน้าในเกมไม่ว่าด้วยสาเหตุใดๆ (เช่น ข้อผิดพลาดของเซิร์ฟเวอร์, บัคในเกม, การกระทำของผู้เล่นอื่น)</li>
+                <li className='mb-4'>การหยุดทำงาน (Downtime) หรือความไม่เสถียรของเซิร์ฟเวอร์</li>
+                <li className='mb-4'>ปัญหาที่เกิดจากการปฏิสัมพันธ์ระหว่างผู้เล่น (Player Interaction)</li>
+                <li className='mb-4'>ความเสียหายต่ออุปกรณ์หรือซอฟต์แวร์ของท่านอันเนื่องมาจากการเชื่อมต่อหรือเล่นบนเซิร์ฟเวอร์นี้</li>
+                <li className='mb-4'>ท่านยอมรับความเสี่ยงทั้งหมดที่เกี่ยวข้องกับการเล่นบนเซิร์ฟเวอร์ชุมชนแบบโอเพนซอร์สนี้</li>
+              </ul>
+              การเปลี่ยนแปลงข้อกำหนด: เราขอสงวนสิทธิ์ในการเปลี่ยนแปลง แก้ไข หรือปรับปรุงข้อกำหนดในการให้บริการนี้ได้ตลอดเวลา การใช้งานเซิร์ฟเวอร์อย่างต่อเนื่องหลังจากมีการเปลี่ยนแปลงถือว่าท่านยอมรับข้อกำหนดที่ได้รับการแก้ไขแล้ว
+            </div> :
+            <div className='text-lg text-gray-300/60 max-w-2xl max-sm:text-sm whitespace-break-spaces'>
+              By accessing and using our Rust server, you are considered to have accepted and agreed to comply with these terms of service, as well as all stated server rules.
+              <br/><br/>
+              Server Nature: This server operates as an open-source community server with the objective of allowing players to interact and enjoy the game Rust together. The server administration team consists of community members who volunteer their personal time and resources for maintenance and development.
+              <br/><br/>
+              Disclaimer of Liability: Due to the nature of this server being a community project and not operating commercially, we disclaim all liability for any damages, losses, or problems that may arise from the use of the server under all circumstances, including but not limited to:
+              <br/><br/>
+              <ul className='list-disc pl-8 mb-6'>
+                <li className='mb-4'>Loss of items, resources, or game progress for any reason (e.g., server errors, game bugs, actions of other players).</li>
+                <li className='mb-4'>Server downtime or instability.</li>
+                <li className='mb-4'>Problems arising from player interaction.</li>
+                <li className='mb-4'>Damage to your equipment or software due to connecting to or playing on this server.</li>
+                <li className='mb-4'>You accept all risks associated with playing on this open-source community server.</li>
+              </ul>
+              Modification of Terms: We reserve the right to change, modify, or update these terms of service at any time. Continued use of the server after changes have been made constitutes your acceptance of the revised terms.
+            </div>
+          }
         </div>
         <div className="dark-bar-pattern absolute bottom-0 left-0 !bg-background w-full !z-30 rotate-180" style={{top:'unset !important'}}></div>
       </motion.div>

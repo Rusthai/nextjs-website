@@ -52,35 +52,67 @@ export default function Home() {
         transition={{ duration: 0.42, delay: 0.6 }}>
         <div className='w-full max-w-3xl mx-auto flex flex-col min-h-24 gap-4'>
           <span>{language.data.agreement.last_updated.replace('$date', new Date("April 28, 2025").toLocaleDateString(language.code, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }))}</span>
-          <div className='text-lg text-gray-300/60 max-w-2xl max-sm:text-sm whitespace-break-spaces'>
-          การสื่อสารเป็นส่วนสำคัญของการเล่น Rust ในชุมชนของเรา เพื่อสร้างบรรยากาศที่ดีและน่าอยู่สำหรับทุกคน โปรดปฏิบัติตามแนวทางดังนี้:
-          <br/><br/>
-          <ul className='list-disc pl-8 mb-6'>
-            <li className='mb-4'>
-              <strong>ใช้คำพูดที่สุภาพและให้เกียรติ</strong>
-              <p>ปฏิบัติต่อผู้เล่นทุกคนด้วยความเคารพ หลีกเลี่ยงการใช้คำหยาบคาย offensive language หรือการดูถูก เหยียดหยาม ไม่ว่าจะเป็นในช่องทางข้อความ (Chat) หรือการสื่อสารด้วยเสียง (Voice Chat)</p>
-            </li>
-            <li className='mb-4'>
-              <strong>หลีกเลี่ยงการก่อกวนและการสร้างความขัดแย้ง</strong>
-              <p>งดเว้นการกระทำหรือคำพูดที่มีเจตนาในการยั่วยุ ก่อกวน หรือสร้างความไม่พอใจให้กับผู้เล่นคนอื่นๆ โดยไม่จำเป็น การโต้เถียงที่ไม่สร้างสรรค์ การสแปมข้อความ หรือการใช้เสียงดังรบกวนผู้อื่นถือเป็นการกระทำที่ไม่เหมาะสม</p>
-            </li>
-            <li className='mb-4'>
-              <strong>รักษาบรรยากาศที่เป็นมิตร</strong>
-              <p>แม้ Rust จะเป็นเกมที่มีการแข่งขันสูง แต่เรายังคงส่งเสริมให้ผู้เล่นมีปฏิสัมพันธ์ที่ดีต่อกัน สามารถพูดคุย แลกเปลี่ยน หรือช่วยเหลือกันได้ตามสมควร</p>
-            </li>
-            <li className='mb-4'>
-              <strong>การสื่อสารนอกเกม</strong>
-              <p>กฎและแนวทางการสื่อสารนี้ครอบคลุมถึงช่องทางการสื่อสารนอกเกมที่เกี่ยวข้องกับชุมชนเซิร์ฟเวอร์ของเราด้วย (เช่น Discord หรือกลุ่มต่างๆ ที่จัดตั้งขึ้นสำหรับเซิร์ฟเวอร์นี้) โปรดรักษาบรรยากาศที่ดีและให้เกียรติซึ่งกันและกันเช่นเดียวกับการสื่อสารภายในเกม</p>
-            </li>
-            <li className='mb-4'>
-              <strong>การรายงานปัญหาการสื่อสาร</strong>
-              <p>หากคุณพบเจอการสื่อสารที่ไม่เหมาะสม การคุกคาม หรือการก่อกวน โปรดใช้ระบบการรายงานหรือติดต่อทีมงานพร้อมหลักฐาน</p>
-            </li>
-          </ul>
-          การไม่ปฏิบัติตามนโยบายการสื่อสารนี้อาจนำไปสู่บทลงโทษ ตั้งแต่การตักเตือน การปิดเสียง (Mute) ชั่วคราว ไปจนถึงการแบนออกจากเซิร์ฟเวอร์ ขึ้นอยู่กับความรุนแรงและพฤติกรรมที่เกิดขึ้น
-          <br/><br/>
-          ทั้งนี้ เราขอสงวนสิทธิ์ในการรับผิดชอบต่อการพูดหรือการกระทำใดๆ ที่เกิดขึ้นการผู้เล่นกันเอง
-          </div>
+          {
+            language.code === "th" ?
+            <div className='text-lg text-gray-300/60 max-w-2xl max-sm:text-sm whitespace-break-spaces'>
+              การสื่อสารเป็นส่วนสำคัญของการเล่น Rust ในชุมชนของเรา เพื่อสร้างบรรยากาศที่ดีและน่าอยู่สำหรับทุกคน โปรดปฏิบัติตามแนวทางดังนี้:
+              <br/><br/>
+              <ul className='list-disc pl-8 mb-6'>
+                <li className='mb-4'>
+                  <strong>ใช้คำพูดที่สุภาพและให้เกียรติ</strong>
+                  <p>ปฏิบัติต่อผู้เล่นทุกคนด้วยความเคารพ หลีกเลี่ยงการใช้คำหยาบคาย offensive language หรือการดูถูก เหยียดหยาม ไม่ว่าจะเป็นในช่องทางข้อความ (Chat) หรือการสื่อสารด้วยเสียง (Voice Chat)</p>
+                </li>
+                <li className='mb-4'>
+                  <strong>หลีกเลี่ยงการก่อกวนและการสร้างความขัดแย้ง</strong>
+                  <p>งดเว้นการกระทำหรือคำพูดที่มีเจตนาในการยั่วยุ ก่อกวน หรือสร้างความไม่พอใจให้กับผู้เล่นคนอื่นๆ โดยไม่จำเป็น การโต้เถียงที่ไม่สร้างสรรค์ การสแปมข้อความ หรือการใช้เสียงดังรบกวนผู้อื่นถือเป็นการกระทำที่ไม่เหมาะสม</p>
+                </li>
+                <li className='mb-4'>
+                  <strong>รักษาบรรยากาศที่เป็นมิตร</strong>
+                  <p>แม้ Rust จะเป็นเกมที่มีการแข่งขันสูง แต่เรายังคงส่งเสริมให้ผู้เล่นมีปฏิสัมพันธ์ที่ดีต่อกัน สามารถพูดคุย แลกเปลี่ยน หรือช่วยเหลือกันได้ตามสมควร</p>
+                </li>
+                <li className='mb-4'>
+                  <strong>การสื่อสารนอกเกม</strong>
+                  <p>กฎและแนวทางการสื่อสารนี้ครอบคลุมถึงช่องทางการสื่อสารนอกเกมที่เกี่ยวข้องกับชุมชนเซิร์ฟเวอร์ของเราด้วย (เช่น Discord หรือกลุ่มต่างๆ ที่จัดตั้งขึ้นสำหรับเซิร์ฟเวอร์นี้) โปรดรักษาบรรยากาศที่ดีและให้เกียรติซึ่งกันและกันเช่นเดียวกับการสื่อสารภายในเกม</p>
+                </li>
+                <li className='mb-4'>
+                  <strong>การรายงานปัญหาการสื่อสาร</strong>
+                  <p>หากคุณพบเจอการสื่อสารที่ไม่เหมาะสม การคุกคาม หรือการก่อกวน โปรดใช้ระบบการรายงานหรือติดต่อทีมงานพร้อมหลักฐาน</p>
+                </li>
+              </ul>
+              การไม่ปฏิบัติตามนโยบายการสื่อสารนี้อาจนำไปสู่บทลงโทษ ตั้งแต่การตักเตือน การปิดเสียง (Mute) ชั่วคราว ไปจนถึงการแบนออกจากเซิร์ฟเวอร์ ขึ้นอยู่กับความรุนแรงและพฤติกรรมที่เกิดขึ้น
+              <br/><br/>
+              ทั้งนี้ เราขอสงวนสิทธิ์ในการรับผิดชอบต่อการพูดหรือการกระทำใดๆ ที่เกิดขึ้นการผู้เล่นกันเอง
+            </div> :
+            <div className='text-lg text-gray-300/60 max-w-2xl max-sm:text-sm whitespace-break-spaces'>
+              Communication is a vital part of playing Rust in our community. To create a positive and welcoming atmosphere for everyone, please follow these guidelines:
+              <br/><br/>
+              <ul className='list-disc pl-8 mb-6'>
+                <li className='mb-4'>
+                  <strong>Use Polite and Respectful Language</strong>
+                  <p>Treat all players with respect. Avoid using offensive language, insults, or derogatory remarks, whether in text chat or voice chat.</p>
+                </li>
+                <li className='mb-4'>
+                  <strong>Avoid Harassment and Creating Conflict</strong>
+                  <p>Refrain from actions or words intended to provoke, harass, or unnecessarily upset other players. Unconstructive arguments, message spamming, or disruptive loud noises are considered inappropriate behavior.</p>
+                </li>
+                <li className='mb-4'>
+                  <strong>Maintain a Friendly Atmosphere</strong>
+                  <p>Although Rust is a highly competitive game, we still encourage players to have positive interactions with each other. Feel free to chat, exchange information, or assist each other as appropriate.</p>
+                </li>
+                <li className='mb-4'>
+                  <strong>Out-of-Game Communication</strong>
+                  <p>These communication rules and guidelines also apply to out-of-game communication channels related to our server community (e.g., Discord or various groups set up for this server). Please maintain a positive and respectful atmosphere just as you would in in-game communication.</p>
+                </li>
+                <li className='mb-4'>
+                  <strong>Reporting Communication Issues</strong>
+                  <p>If you encounter inappropriate communication, harassment, or disruption, please use the reporting system or contact the staff with evidence.</p>
+                </li>
+              </ul>
+              Failure to comply with this communication policy may result in penalties, ranging from a warning or temporary mute to a server ban, depending on the severity and behavior.
+              <br/><br/>
+              Please note that we reserve the right to not be responsible for any speech or actions that occur between players themselves.
+            </div>
+          }
         </div>
         <div className="dark-bar-pattern absolute bottom-0 left-0 !bg-background w-full !z-30 rotate-180" style={{top:'unset !important'}}></div>
       </motion.div>

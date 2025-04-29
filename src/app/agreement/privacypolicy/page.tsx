@@ -52,34 +52,65 @@ export default function Home() {
         transition={{ duration: 0.42, delay: 0.6 }}>
         <div className='w-full max-w-3xl mx-auto flex flex-col min-h-24 gap-4'>
           <span>{language.data.agreement.last_updated.replace('$date', new Date("April 28, 2025").toLocaleDateString(language.code, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }))}</span>
-          <div className='text-lg text-gray-300/60 max-w-2xl max-sm:text-sm whitespace-break-spaces'>
-          นโยบายความเป็นส่วนตัวนี้อธิบายถึงข้อมูลที่เราอาจมีการจัดเก็บและวิธีที่เราใช้ข้อมูลดังกล่าว ในฐานะเซิร์ฟเวอร์ชุมชนแบบโอเพนซอร์ส เรามุ่งมั่นที่จะจัดการข้อมูลของท่านเท่าที่จำเป็นและเหมาะสม
-          <br/><br/>
-          ข้อมูลที่อาจมีการจัดเก็บ: ในการดำเนินงานเซิร์ฟเวอร์ อาจมีการจัดเก็บข้อมูลบางส่วนของท่าน ซึ่งโดยทั่วไปจะจำกัดอยู่เพียงข้อมูลที่จำเป็นสำหรับการเชื่อมต่อ การระบุตัวตนในเกม และการดูแลเซิร์ฟเวอร์ เช่น:
-          <br/><br/>
-          <ul className='list-disc pl-8 mb-6'>
-            <li className='mb-4'>SteamID ของท่าน</li>
-            <li className='mb-4'>ชื่อตัวละคร (In-game name) ของท่าน</li>
-            <li className='mb-4'>ที่อยู่ IP (IP Address) ที่ใช้ในการเชื่อมต่อ (สำหรับการรักษาความปลอดภัยและการป้องกันการเข้าถึงที่ไม่ได้รับอนุญาต)</li>
-            <li className='mb-4'>ข้อมูลบันทึกการเล่น (Server Logs) ที่เกี่ยวข้องกับกิจกรรมภายในเกมเพื่อวัตถุประสงค์ในการดูแลและแก้ไขปัญหา</li>
-          </ul>
-          การใช้ข้อมูล: ข้อมูลที่จัดเก็บจะถูกนำไปใช้เพื่อวัตถุประสงค์ดังต่อไปนี้เท่านั้น:
-          <br/><br/>
-          <ul className='list-disc pl-8 mb-6'>
-            <li className='mb-4'>อนุญาตให้ท่านเชื่อมต่อและเล่นบนเซิร์ฟเวอร์ได้</li>
-            <li className='mb-4'>ระบุตัวตนและจัดการบัญชีผู้เล่นของท่านภายในเซิร์ฟเวอร์</li>
-            <li className='mb-4'>บังคับใช้กฎของเซิร์ฟเวอร์และทำการดูแล (Moderation)</li>
-            <li className='mb-4'>แก้ไขปัญหาทางเทคนิคและปรับปรุงประสิทธิภาพของเซิร์ฟเวอร์</li>
-            <li className='mb-4'>รักษาความปลอดภัยและป้องกันการโกงหรือการเข้าถึงที่ไม่ได้รับอนุญาต</li>
-          </ul>
-          การแบ่งปันข้อมูล: เราจะไม่เปิดเผย แบ่งปัน หรือขายข้อมูลส่วนบุคคลของท่านให้กับบุคคลที่สามใดๆ เว้นแต่จะถูกร้องขอโดยชอบด้วยกฎหมายจากหน่วยงานราชการ
-          <br/><br/>
-          การปฏิเสธความรับผิดชอบด้านความปลอดภัยของข้อมูล: แม้เราจะใช้ความพยายามตามสมควรในการปกป้องข้อมูลที่จัดเก็บ แต่เนื่องจากข้อจำกัดของทรัพยากรในฐานะเซิร์ฟเวอร์ชุมชนแบบโอเพนซอร์ส เราไม่สามารถรับประกันความปลอดภัยของข้อมูลได้อย่างสมบูรณ์ และขอปฏิเสธความรับผิดชอบต่อความเสียหายที่อาจเกิดขึ้นจากเหตุการณ์ข้อมูลรั่วไหล (Data Breach) หรือการเข้าถึงข้อมูลโดยไม่ได้รับอนุญาตที่อยู่นอกเหนือการควบคุมโดยตรงของเรา การให้ข้อมูลของท่านถือว่าท่านยอมรับความเสี่ยงดังกล่าว
-          <br/><br/>
-          การยอมรับนโยบาย: การใช้งานเซิร์ฟเวอร์นี้ถือว่าท่านได้อ่านและยอมรับนโยบายความเป็นส่วนตัวนี้แล้ว
-          <br/><br/>
-          การเปลี่ยนแปลงนโยบาย: เราขอสงวนสิทธิ์ในการเปลี่ยนแปลง แก้ไข หรือปรับปรุงนโยบายความเป็นส่วนตัวนี้ได้ตลอดเวลา การใช้งานเซิร์ฟเวอร์อย่างต่อเนื่องหลังจากมีการเปลี่ยนแปลงถือว่าท่านยอมรับนโยบายที่ได้รับการแก้ไขแล้ว
-          </div>
+          {
+            language.code === "th" ?
+            <div className='text-lg text-gray-300/60 max-w-2xl max-sm:text-sm whitespace-break-spaces'>
+              นโยบายความเป็นส่วนตัวนี้อธิบายถึงข้อมูลที่เราอาจมีการจัดเก็บและวิธีที่เราใช้ข้อมูลดังกล่าว ในฐานะเซิร์ฟเวอร์ชุมชนแบบโอเพนซอร์ส เรามุ่งมั่นที่จะจัดการข้อมูลของท่านเท่าที่จำเป็นและเหมาะสม
+              <br/><br/>
+              ข้อมูลที่อาจมีการจัดเก็บ: ในการดำเนินงานเซิร์ฟเวอร์ อาจมีการจัดเก็บข้อมูลบางส่วนของท่าน ซึ่งโดยทั่วไปจะจำกัดอยู่เพียงข้อมูลที่จำเป็นสำหรับการเชื่อมต่อ การระบุตัวตนในเกม และการดูแลเซิร์ฟเวอร์ เช่น:
+              <br/><br/>
+              <ul className='list-disc pl-8 mb-6'>
+                <li className='mb-4'>SteamID ของท่าน</li>
+                <li className='mb-4'>ชื่อตัวละคร (In-game name) ของท่าน</li>
+                <li className='mb-4'>ที่อยู่ IP (IP Address) ที่ใช้ในการเชื่อมต่อ (สำหรับการรักษาความปลอดภัยและการป้องกันการเข้าถึงที่ไม่ได้รับอนุญาต)</li>
+                <li className='mb-4'>ข้อมูลบันทึกการเล่น (Server Logs) ที่เกี่ยวข้องกับกิจกรรมภายในเกมเพื่อวัตถุประสงค์ในการดูแลและแก้ไขปัญหา</li>
+              </ul>
+              การใช้ข้อมูล: ข้อมูลที่จัดเก็บจะถูกนำไปใช้เพื่อวัตถุประสงค์ดังต่อไปนี้เท่านั้น:
+              <br/><br/>
+              <ul className='list-disc pl-8 mb-6'>
+                <li className='mb-4'>อนุญาตให้ท่านเชื่อมต่อและเล่นบนเซิร์ฟเวอร์ได้</li>
+                <li className='mb-4'>ระบุตัวตนและจัดการบัญชีผู้เล่นของท่านภายในเซิร์ฟเวอร์</li>
+                <li className='mb-4'>บังคับใช้กฎของเซิร์ฟเวอร์และทำการดูแล (Moderation)</li>
+                <li className='mb-4'>แก้ไขปัญหาทางเทคนิคและปรับปรุงประสิทธิภาพของเซิร์ฟเวอร์</li>
+                <li className='mb-4'>รักษาความปลอดภัยและป้องกันการโกงหรือการเข้าถึงที่ไม่ได้รับอนุญาต</li>
+              </ul>
+              การแบ่งปันข้อมูล: เราจะไม่เปิดเผย แบ่งปัน หรือขายข้อมูลส่วนบุคคลของท่านให้กับบุคคลที่สามใดๆ เว้นแต่จะถูกร้องขอโดยชอบด้วยกฎหมายจากหน่วยงานราชการ
+              <br/><br/>
+              การปฏิเสธความรับผิดชอบด้านความปลอดภัยของข้อมูล: แม้เราจะใช้ความพยายามตามสมควรในการปกป้องข้อมูลที่จัดเก็บ แต่เนื่องจากข้อจำกัดของทรัพยากรในฐานะเซิร์ฟเวอร์ชุมชนแบบโอเพนซอร์ส เราไม่สามารถรับประกันความปลอดภัยของข้อมูลได้อย่างสมบูรณ์ และขอปฏิเสธความรับผิดชอบต่อความเสียหายที่อาจเกิดขึ้นจากเหตุการณ์ข้อมูลรั่วไหล (Data Breach) หรือการเข้าถึงข้อมูลโดยไม่ได้รับอนุญาตที่อยู่นอกเหนือการควบคุมโดยตรงของเรา การให้ข้อมูลของท่านถือว่าท่านยอมรับความเสี่ยงดังกล่าว
+              <br/><br/>
+              การยอมรับนโยบาย: การใช้งานเซิร์ฟเวอร์นี้ถือว่าท่านได้อ่านและยอมรับนโยบายความเป็นส่วนตัวนี้แล้ว
+              <br/><br/>
+              การเปลี่ยนแปลงนโยบาย: เราขอสงวนสิทธิ์ในการเปลี่ยนแปลง แก้ไข หรือปรับปรุงนโยบายความเป็นส่วนตัวนี้ได้ตลอดเวลา การใช้งานเซิร์ฟเวอร์อย่างต่อเนื่องหลังจากมีการเปลี่ยนแปลงถือว่าท่านยอมรับนโยบายที่ได้รับการแก้ไขแล้ว
+            </div> :
+            <div className='text-lg text-gray-300/60 max-w-2xl max-sm:text-sm whitespace-break-spaces'>
+              This privacy policy explains the data we may collect and how we use it. As an open-source community server, we are committed to handling your data only as necessary and appropriate.
+              <br/><br/>
+              Data That May Be Collected: In operating the server, certain data about you may be collected. This is generally limited to information necessary for connection, in-game identification, and server administration, such as:
+              <br/><br/>
+              <ul className='list-disc pl-8 mb-6'>
+                <li className='mb-4'>Your SteamID</li>
+                <li className='mb-4'>Your in-game name</li>
+                <li className='mb-4'>The IP Address used to connect (for security and preventing unauthorized access)</li>
+                <li className='mb-4'>Server Logs related to in-game activity for administration and troubleshooting purposes</li>
+              </ul>
+              Use of Data: Collected data will be used solely for the following purposes:
+              <br/><br/>
+              <ul className='list-disc pl-8 mb-6'>
+                <li className='mb-4'>To allow you to connect and play on the server</li>
+                <li className='mb-4'>To identify and manage your player account within the server</li>
+                <li className='mb-4'>To enforce server rules and perform moderation</li>
+                <li className='mb-4'>To troubleshoot technical issues and improve server performance</li>
+                <li className='mb-4'>To maintain security and prevent cheating or unauthorized access</li>
+              </ul>
+              Data Sharing: We will not disclose, share, or sell your personal data to any third parties, unless legally required by a government authority.
+              <br/><br/>
+              Data Security Disclaimer: Although we make reasonable efforts to protect the data collected, due to resource limitations as an open-source community server, we cannot guarantee complete data security and disclaim responsibility for damages that may arise from data breaches or unauthorized data access beyond our direct control. By providing your information, you acknowledge these risks.
+              <br/><br/>
+              Policy Acceptance: Your use of this server signifies that you have read and accepted this privacy policy.
+              <br/><br/>
+              Changes to Policy: We reserve the right to change, modify, or update this privacy policy at any time. Your continued use of the server after changes signifies your acceptance of the revised policy.
+            </div>
+          }
         </div>
         <div className="dark-bar-pattern absolute bottom-0 left-0 !bg-background w-full !z-30 rotate-180" style={{top:'unset !important'}}></div>
       </motion.div>

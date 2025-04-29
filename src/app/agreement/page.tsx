@@ -44,7 +44,7 @@ export default function Home() {
         <div className="dark-bar-pattern absolute bottom-0 left-0 !bg-background translate-y-full w-full !z-30 rotate-180" style={{top:'unset !important'}}></div>
       </motion.div>
       <div className='mt-[36rem]'></div>
-      <motion.div className='relative w-full min-h-96 text-white font-bold px-4 py-6'
+      <motion.div className='relative w-full min-h-96 text-white font-bold px-4 py-6 group'
         initial={{ opacity: 0, x: -24 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.42, delay: 0.6 }}>
@@ -55,8 +55,8 @@ export default function Home() {
           style={{ transitionDuration: "0.64s" }}
           className="absolute top-0 left-0 overflow-hidden w-screen h-full hero-animate -z-10"
         >
-          <img className="w-full h-full object-cover" src='/DevastationUnleashed_HeroImage_1920x1080.jpg' />
-          <div className='w-full h-full absolute top-0 left-0 bg-gradient-to-bl from-transparent to-orange-900/40 z-10'></div>
+          <img className="w-full h-full object-cover group-hover:scale-105" src='/DevastationUnleashed_HeroImage_1920x1080.jpg' />
+          <div className='w-full h-full absolute top-0 left-0 bg-gradient-to-bl from-transparent to-orange-900 opacity-40 group-hover:opacity-80 z-10'></div>
           <div className='w-full h-full absolute top-0 left-0 bg-gradient-to-b from-transparent to-black/90 z-20'></div>
         </motion.div>
         <div className='w-full max-w-6xl mx-auto flex flex-col min-h-24 gap-4 p-24'>
@@ -78,7 +78,7 @@ export default function Home() {
           </motion.div>
         </div>
       </motion.div>
-      <motion.div className='relative w-full min-h-96 text-white font-bold px-4 py-6'
+      <motion.div className='relative w-full min-h-96 text-white font-bold px-4 py-6 group'
         initial={{ opacity: 0, x: -24 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
@@ -90,8 +90,8 @@ export default function Home() {
           style={{ transitionDuration: "0.64s" }}
           className="absolute top-0 left-0 overflow-hidden w-screen h-full hero-animate -z-10"
         >
-          <img className="w-full h-full object-cover" src='/ss_1c2d0d1eefee54f0c67626c74eb21699bbb0ef52.1920x1080.jpg' />
-          <div className='w-full h-full absolute top-0 left-0 bg-gradient-to-br from-transparent to-green-900/40 z-10'></div>
+          <img className="w-full h-full object-cover group-hover:scale-105" src='/ss_1c2d0d1eefee54f0c67626c74eb21699bbb0ef52.1920x1080.jpg' />
+          <div className='w-full h-full absolute top-0 left-0 bg-gradient-to-br from-transparent to-green-900 opacity-40 group-hover:opacity-80 z-10'></div>
           <div className='w-full h-full absolute top-0 left-0 bg-gradient-to-b from-transparent to-black/90 z-20'></div>
         </motion.div>
         <div className='w-full max-w-6xl mx-auto flex flex-col items-end text-end min-h-24 gap-4 p-24'>
@@ -113,7 +113,7 @@ export default function Home() {
           </motion.div>
         </div>
       </motion.div>
-      <motion.div className='relative w-full min-h-96 text-white font-bold px-4 py-6'
+      <motion.div className='relative w-full min-h-96 text-white font-bold px-4 py-6 group'
         initial={{ opacity: 0, x: -24 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
@@ -125,8 +125,8 @@ export default function Home() {
           style={{ transitionDuration: "0.64s" }}
           className="absolute top-0 left-0 overflow-hidden w-screen h-full hero-animate -z-10"
         >
-          <img className="w-full h-full object-cover" src='/rust_202409_ttk_heroimage.jpg' />
-          <div className='w-full h-full absolute top-0 left-0 bg-gradient-to-bl from-transparent to-red-900/40 z-10'></div>
+          <img className="w-full h-full object-cover group-hover:scale-105" src='/rust_202409_ttk_heroimage.jpg' />
+          <div className='w-full h-full absolute top-0 left-0 bg-gradient-to-bl from-transparent to-red-900 opacity-40 group-hover:opacity-80 z-10'></div>
           <div className='w-full h-full absolute top-0 left-0 bg-gradient-to-b from-transparent to-black/90 z-20'></div>
         </motion.div>
         <div className='w-full max-w-6xl mx-auto flex flex-col min-h-24 gap-4 p-24'>
@@ -148,7 +148,7 @@ export default function Home() {
           </motion.div>
         </div>
       </motion.div>
-      <motion.div className='relative w-full min-h-96 text-white font-bold px-4 py-6'
+      <motion.div className='relative w-full min-h-96 text-white font-bold px-4 py-6 group'
         initial={{ opacity: 0, x: -24 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
@@ -160,8 +160,8 @@ export default function Home() {
           style={{ transitionDuration: "0.64s" }}
           className="absolute top-0 left-0 overflow-hidden w-screen h-full hero-animate -z-10"
         >
-          <img className="w-full h-full object-cover" src='/gesture-header.jpg' />
-          <div className='w-full h-full absolute top-0 left-0 bg-gradient-to-br from-transparent to-yellow-900/40 z-10'></div>
+          <img className="w-full h-full object-cover group-hover:scale-105" src='/gesture-header.jpg' />
+          <div className='w-full h-full absolute top-0 left-0 bg-gradient-to-br from-transparent to-yellow-900 opacity-40 group-hover:opacity-80 z-10'></div>
           <div className='w-full h-full absolute top-0 left-0 bg-gradient-to-b from-transparent to-black/90 z-20'></div>
         </motion.div>
         <div className='w-full max-w-6xl mx-auto flex flex-col items-end text-end min-h-24 gap-4 p-24'>
@@ -191,7 +191,7 @@ export default function Home() {
           </motion.div>
         </div>
       </motion.div>
-      <motion.div className='relative w-full min-h-96 text-white font-bold px-4 py-6'
+      <motion.div className='relative w-full min-h-96 text-white font-bold px-4 py-6 group'
         initial={{ opacity: 0, x: -24 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
@@ -203,8 +203,8 @@ export default function Home() {
           style={{ transitionDuration: "0.64s" }}
           className="absolute top-0 left-0 overflow-hidden w-screen h-full hero-animate -z-10"
         >
-          <img className="w-full h-full object-cover" src='/rust_primupdate_teaser_armourset_01.jpg' />
-          <div className='w-full h-full absolute top-0 left-0 bg-gradient-to-b from-transparent to-sky-900/40 z-10'></div>
+          <img className="w-full h-full object-cover group-hover:scale-105" src='/rust_primupdate_teaser_armourset_01.jpg' />
+          <div className='w-full h-full absolute top-0 left-0 bg-gradient-to-b from-transparent to-sky-900 opacity-40 group-hover:opacity-80 z-10'></div>
           <div className='w-full h-full absolute top-0 left-0 bg-gradient-to-b from-transparent to-black/90 z-20'></div>
         </motion.div>
         <div className='w-full max-w-6xl mx-auto flex flex-col items-center text-center min-h-24 gap-4 p-24'>

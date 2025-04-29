@@ -52,17 +52,31 @@ export default function Home() {
         transition={{ duration: 0.42, delay: 0.6 }}>
         <div className='w-full max-w-3xl mx-auto flex flex-col min-h-24 gap-4'>
           <span>{language.data.agreement.last_updated.replace('$date', new Date("April 28, 2025").toLocaleDateString(language.code, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }))}</span>
-          <p className='text-lg text-gray-300/60 max-w-2xl max-sm:text-sm whitespace-break-spaces'>
-          เป้าหมายหลักของเราคือการสร้างและรักษา ชุมชนผู้เล่น Rust ที่แข็งแกร่ง ดี และน่าอยู่สำหรับทุกคน
-          <br/><br/>
-          เราเชื่อว่าผู้เล่นทุกท่านคือส่วนสำคัญในการขับเคลื่อนชุมชนนี้ ทุกคนมีส่วนร่วมและความรับผิดชอบ ในการสร้างบรรยากาศที่เป็นมิตร ให้เกียรติซึ่งกันและกัน และส่งเสริมประสบการณ์การเล่นที่ดีสำหรับผู้เล่นคนอื่นๆ
-          <br/><br/>
-          การเคารพกฎ การสื่อสารอย่างสร้างสรรค์ และการมีน้ำใจนักกีฬา จะช่วยให้ชุมชนของเราเติบโตและเป็นพื้นที่ที่ทุกคนอยากใช้เวลาอยู่ด้วย
-          <br/><br/>
-          หากคุณพบเห็นพฤติกรรมใดๆ ที่ไม่เหมาะสม ไม่ว่าจะเป็นการทำผิดกฎ การกลั่นแกล้ง หรือการกระทำที่เป็นภัยต่อบรรยากาศที่ดีของชุมชน โปรดอย่าลังเลที่จะรายงานทีมงาน ข้อมูลและการแจ้งเตือนจากพวกคุณมีค่าอย่างยิ่งในการช่วยให้เราสามารถตรวจสอบ จัดการ และรักษาคุณภาพของชุมชนของเราไว้ได้
-          <br/><br/>
-          มาร่วมมือกันสร้างชุมชน Rust ที่ดีที่สุดด้วยกัน!
-          </p>
+          {
+            language.code === "th" ?
+            <p className='text-lg text-gray-300/60 max-w-2xl max-sm:text-sm whitespace-break-spaces'>
+              เป้าหมายหลักของเราคือการสร้างและรักษา ชุมชนผู้เล่น Rust ที่แข็งแกร่ง ดี และน่าอยู่สำหรับทุกคน
+              <br/><br/>
+              เราเชื่อว่าผู้เล่นทุกท่านคือส่วนสำคัญในการขับเคลื่อนชุมชนนี้ ทุกคนมีส่วนร่วมและความรับผิดชอบ ในการสร้างบรรยากาศที่เป็นมิตร ให้เกียรติซึ่งกันและกัน และส่งเสริมประสบการณ์การเล่นที่ดีสำหรับผู้เล่นคนอื่นๆ
+              <br/><br/>
+              การเคารพกฎ การสื่อสารอย่างสร้างสรรค์ และการมีน้ำใจนักกีฬา จะช่วยให้ชุมชนของเราเติบโตและเป็นพื้นที่ที่ทุกคนอยากใช้เวลาอยู่ด้วย
+              <br/><br/>
+              หากคุณพบเห็นพฤติกรรมใดๆ ที่ไม่เหมาะสม ไม่ว่าจะเป็นการทำผิดกฎ การกลั่นแกล้ง หรือการกระทำที่เป็นภัยต่อบรรยากาศที่ดีของชุมชน โปรดอย่าลังเลที่จะรายงานทีมงาน ข้อมูลและการแจ้งเตือนจากพวกคุณมีค่าอย่างยิ่งในการช่วยให้เราสามารถตรวจสอบ จัดการ และรักษาคุณภาพของชุมชนของเราไว้ได้
+              <br/><br/>
+              มาร่วมมือกันสร้างชุมชน Rust ที่ดีที่สุดด้วยกัน!
+            </p> :
+            <p className='text-lg text-gray-300/60 max-w-2xl max-sm:text-sm whitespace-break-spaces'>
+              Our main goal is to build and maintain a strong, good, and welcoming Rust player community for everyone.
+              <br/><br/>
+              We believe that every player is an essential part of driving this community. Everyone has a role and responsibility in creating a friendly atmosphere, respecting one another, and promoting a good playing experience for other players.
+              <br/><br/>
+              Respecting the rules, communicating constructively, and having good sportsmanship will help our community grow and become a place everyone wants to spend time in.
+              <br/><br/>
+              If you witness any inappropriate behavior, whether it's breaking rules, bullying, or actions that are detrimental to the good atmosphere of the community, please do not hesitate to report it to the staff. Your information and alerts are invaluable in helping us investigate, manage, and maintain the quality of our community.
+              <br/><br/>
+              Let's work together to build the best Rust community!
+            </p>
+          }
         </div>
         <div className="dark-bar-pattern absolute bottom-0 left-0 !bg-background w-full !z-30 rotate-180" style={{top:'unset !important'}}></div>
       </motion.div>
