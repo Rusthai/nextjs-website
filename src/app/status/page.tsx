@@ -36,6 +36,7 @@ export default function Status() {
   const [isError, setIsError] = React.useState(false);
   const [lastFetchTime, setLastFetchTime] = React.useState<Date | null>(null);
   const [data, setData] = React.useState<StatusRes | null>(null);
+  const [clientTime, setClientTime] = React.useState<number>(0);
   const tags = [
     language.data.tags.auto_restart
   ]
@@ -48,7 +49,7 @@ export default function Status() {
   const diffMDInDays = diffMDInMs / (1000 * 60 * 60 * 24);
 
   const isFirstDayHighlight = diffInDays <= 5 && diffInDays >= 0;
-  const isMiddleDateHighlight = diffMDInDays <= 5 && diffMDInDays >= 0;
+  const isMiddleDateHighlight = diffMDInDays <= 3 && diffMDInDays >= 0;
   const highlightClassname = '!-order-10 !bg-amber-600/20';
 
   const fetchStatus = async () => {
@@ -211,9 +212,9 @@ export default function Status() {
               >
                 <div className='flex flex-col'>
                   <span className='text-sm'>{language.data.status.info.gametime} (24 {language.data.utils.time.hours})</span>
-                  <GameTimer className="text-5xl font-bold" initialRustTime={data.info.env.time} />
+                  <GameTimer className="text-5xl font-bold" initialRustTime={data.info.env.time} fallback={setClientTime} />
                 </div>
-                <h1 className='font-bold text-6xl'>{ isDaytime(data.info.env.time) ? "🌞" : "🌙" }</h1>
+                <h1 className='font-bold text-6xl'>{ isDaytime(clientTime) ? "🌞" : "🌙" }</h1>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 24 }}
