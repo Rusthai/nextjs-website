@@ -9,11 +9,11 @@ The Rusthai Community opened our Rust server for public Open Beta testing over t
 
 ## **Player Overview and Geography**
 
-During the 7 days of the Open Beta, approximately **92 players** participated and were recorded, showing a certain level of interest from players.
+During the 7 days of the Open Beta, approximately **93 players** participated and were recorded, showing a certain level of interest from players.
 
 * **Distribution by Country:**
     * Thailand: 57 players
-    * Philippines: 14 players
+    * Philippines: 15 players
     * Hong Kong: 6 players
     * Korea: 6 players
     * Malaysia: 3 player
@@ -38,7 +38,7 @@ The peak concurrent players occurred between approximately **8:54 PM and 1:00 AM
 
 Regarding server rule enforcement, a total of **10 players** were penalized, representing 100% of the players who received penalties.
 
-* **Country of Penalized Players:** 71.43% of the penalized players were from the Philippines.
+* **Country of Penalized Players:** 100% of the penalized players were from the Philippines, which is **71.43%** of the Philippines' players.
 * **Reason for Punishment:** 100% of the reasons for punishment were for "Breaking the Game rules", specifically allegations of Teaming or Associating (forming alliances between teams) exceeding 8 members, which violates the server's set limit.
 
 ## **Server Performance and Stability**
