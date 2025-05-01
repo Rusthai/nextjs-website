@@ -30,3 +30,8 @@ export function getTargetDates() {
 
   return { firstThursday, middleDate };
 }
+
+export function isDaytime(time: number): boolean {
+    const normalizedTime = time % 24;
+    return normalizedTime >= 6 && normalizedTime < 18;
+}
