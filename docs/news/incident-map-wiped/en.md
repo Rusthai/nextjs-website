@@ -12,7 +12,7 @@ We would like to inform you that the server has undergone a **Map Wipe** followi
 
 🙏 We sincerely apologize for the inconvenience and the loss of bases or player-built structures. We truly understand the effort and time you've invested.
 
-Rest assured, we will use this incident to improve how we schedule future `Full Wipes` and `Map Wipes`, aiming to prevent unexpected occurrences like this.
+Rest assured, we will use this incident to improve how we schedule future __Full Wipes__ and __Map Wipes__, aiming to prevent unexpected occurrences like this.
 
 Thank you for your understanding. If you have any further questions, feel free to reach out to the admin team at any time.
 
