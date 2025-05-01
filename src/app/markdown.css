@@ -53,14 +53,14 @@
 
 /* Code blocks */
 .markdown-body pre {
-  background-color: #f6f8fa;
+  background-color: rgb(255,255,255,0.4);
   padding: 16px;
   overflow: auto;
   border-radius: 6px;
 }
 
 .markdown-body code {
-  background-color: #f6f8fa;
+  background-color: rgb(255,255,255,0.4);
   padding: .2em .4em;
   border-radius: 3px;
   font-size: 85%;
