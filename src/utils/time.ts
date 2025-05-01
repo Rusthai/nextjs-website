@@ -1,32 +1,42 @@
 export function getTargetDates() {
   const now = new Date();
-  const year = now.getFullYear();
-  const month = now.getMonth();
 
-  // Get the first day of this month
-  let firstDayOfMonth = new Date(year, month, 1);
+  // Calculate the first Thursday of the current or next month
+  let month = now.getMonth();
+  let year = now.getFullYear();
 
-  // Find the first Thursday
-  let firstThursday = new Date(firstDayOfMonth);
-  while (firstThursday.getDay() !== 4) {
-    firstThursday.setDate(firstThursday.getDate() + 1);
-  }
+  // If today is after the first Thursday of this month, use next month
+  const firstOfMonth = new Date(year, month, 1);
+  const firstThursday = new Date(firstOfMonth);
+  const dayOfWeek = firstThursday.getDay(); // 0 = Sun, 1 = Mon, ..., 4 = Thu
 
-  // If it's already past this month's first Thursday, go to next month's first Thursday
+  const diffToThursday = (4 - dayOfWeek + 7) % 7;
+  firstThursday.setDate(firstThursday.getDate() + diffToThursday);
+
   if (now > firstThursday) {
-    const nextMonth = month + 1;
-    firstDayOfMonth = new Date(year, nextMonth, 1);
-    firstThursday = new Date(firstDayOfMonth);
-    while (firstThursday.getDay() !== 4) {
-      firstThursday.setDate(firstThursday.getDate() + 1);
+    // Move to next month
+    month += 1;
+    if (month > 11) {
+      month = 0;
+      year += 1;
     }
+    const nextMonthFirst = new Date(year, month, 1);
+    const nextFirstThursday = new Date(nextMonthFirst);
+    const dow = nextFirstThursday.getDay();
+    const delta = (4 - dow + 7) % 7;
+    nextFirstThursday.setDate(nextFirstThursday.getDate() + delta);
+    firstThursday.setTime(nextFirstThursday.getTime());
   }
-
-  // Get the middle date of the target month (same as firstThursday's month)
-  const middleMonth = firstThursday.getMonth();
-  const daysInMonth = new Date(firstThursday.getFullYear(), middleMonth + 1, 0).getDate();
+  
+  const daysInMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
   const middleDay = Math.ceil(daysInMonth / 2);
-  const middleDate = new Date(firstThursday.getFullYear(), middleMonth, middleDay);
+  
+  let middleDate = new Date(now.getFullYear(), now.getMonth(), middleDay);
+  if (now > middleDate) {
+    const nextMonthDays = new Date(now.getFullYear(), now.getMonth() + 2, 0).getDate();
+    const nextMiddleDay = Math.ceil(nextMonthDays / 2);
+    middleDate = new Date(now.getFullYear(), now.getMonth() + 1, nextMiddleDay);
+  }
 
   return { firstThursday, middleDate };
 }
