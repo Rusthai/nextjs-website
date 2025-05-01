@@ -41,14 +41,14 @@ export default function Status() {
     language.data.tags.auto_restart
   ]
 
-  const { firstDay, middleDate } = getTargetDates();
+  const { firstThursday, middleDate } = getTargetDates();
   const now = new Date();
-  const diffInMs = firstDay.getTime() - now.getTime();
+  const diffInMs = firstThursday.getTime() - now.getTime();
   const diffInDays = diffInMs / (1000 * 60 * 60 * 24);
   const diffMDInMs = middleDate.getTime() - now.getTime();
   const diffMDInDays = diffMDInMs / (1000 * 60 * 60 * 24);
 
-  const isFirstDayHighlight = diffInDays <= 5 && diffInDays >= 0;
+  const isfirstThursdayHighlight = diffInDays <= 5 && diffInDays >= 0;
   const isMiddleDateHighlight = diffMDInDays <= 3 && diffMDInDays >= 0;
   const highlightClassname = '!-order-10 !bg-amber-600/20';
 
@@ -184,12 +184,12 @@ export default function Status() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 24 }}
             transition={{ duration: 0.42, delay: 3 * 0.2 }}
-            className={"p-6 pt-8 rounded-4xl tracking-wider text-xs bg-foreground/10 w-[calc(50%_-_1rem)] max-md:w-full flex flex-col gap-2 relative " + (isFirstDayHighlight?highlightClassname:'')}
+            className={"p-6 pt-8 rounded-4xl tracking-wider text-xs bg-foreground/10 w-[calc(50%_-_1rem)] max-md:w-full flex flex-col gap-2 relative " + (isfirstThursdayHighlight?highlightClassname:'')}
           >
-            <span className='text-xs absolute top-0 left-0 mx-4 -translate-y-1/2 bg-zinc-900 rounded-lg px-4 py-2 tracking-wider text-white/40'>{language.data.tags.full_wiped} {isFirstDayHighlight&&<strong className='text-amber-700'>({language.data.tags.upcoming})</strong>}</span>
+            <span className='text-xs absolute top-0 left-0 mx-4 -translate-y-1/2 bg-zinc-900 rounded-lg px-4 py-2 tracking-wider text-white/40'>{language.data.tags.full_wiped} {isfirstThursdayHighlight&&<strong className='text-amber-700'>({language.data.tags.upcoming})</strong>}</span>
             <span className='opacity-40 text-xs'>{language.data.status.info.wipe.next_full_wipe}</span>
-            <h1 className='font-bold text-xl'>{language.data.utils.time.in} {!isError ? firstDay.toLocaleDateString(language.code, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) : "???"}</h1>
-            { !isError && <Countdown targetDate={firstDay} template={language.data.status.info.wipe.timeleft} /> }
+            <h1 className='font-bold text-xl'>{language.data.utils.time.in} {!isError ? firstThursday.toLocaleDateString(language.code, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) : "???"}</h1>
+            { !isError && <Countdown targetDate={firstThursday} template={language.data.status.info.wipe.timeleft} /> }
           </motion.div>
         </motion.div>
       </div>
