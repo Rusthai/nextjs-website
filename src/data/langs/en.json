@@ -12,6 +12,7 @@
         "vanilla": "Vanilla",
         "auto_restart": "Automatically restart everyday at 4:50 AM (UTC+7)",
         "full_wiped": "Full Wiped: Monthly",
+        "full_wiped_on_first_thursday_of_the_month": "Full Wiped: Every first Thursday of the month",
         "map_wiped": "Map Wiped: Bi-Weekly",
         "upcoming": "Upcoming"
     },

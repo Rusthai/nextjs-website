@@ -12,6 +12,7 @@
         "vanilla": "バニラ",
         "auto_restart": "毎日 04:50 (UTC+7) に自動再起動",
         "full_wiped": "完全ワイプ：毎月1日",
+        "full_wiped_on_first_thursday_of_the_month": "完全消去: 毎月第一木曜日",
         "map_wiped": "マップワイプ：毎月半ば",
         "upcoming": "近日開催"
     },

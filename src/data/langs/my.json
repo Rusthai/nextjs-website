@@ -12,6 +12,7 @@
         "vanilla": "Vanilla",
         "auto_restart": "Restart Automatik Setiap Hari pada 04:50 (UTC+7)",
         "full_wiped": "Padam Penuh: Hari Pertama Setiap Bulan",
+        "full_wiped_on_first_thursday_of_the_month": "Dihapus Penuh: Setiap Khamis pertama setiap bulan",
         "map_wiped": "Padam Peta: Pertengahan Setiap Bulan",
         "upcoming": "Akan Datang"
     },

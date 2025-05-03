@@ -12,6 +12,7 @@
         "vanilla": "Vanilla",
         "auto_restart": "Awtomatikong Restart Araw-araw sa 04:50 (UTC+7)",
         "full_wiped": "Buong Pag-wipe: Unang Araw ng Bawat Buwan",
+        "full_wiped_on_first_thursday_of_the_month": "Full Wiped: Tuwing unang Huwebes ng buwan",
         "map_wiped": "Pag-wipe ng Mapa: Kalagitnaan ng Bawat Buwan",
         "upcoming": "Parating na"
     },

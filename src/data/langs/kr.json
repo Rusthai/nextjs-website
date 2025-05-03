@@ -12,6 +12,7 @@
         "vanilla": "바닐라",
         "auto_restart": "매일 04:50 AM (UTC+7) 자동 재시작",
         "full_wiped": "전체 초기화: 매월 첫째 날",
+        "full_wiped_on_first_thursday_of_the_month": "Full Wiped: 매월 첫 번째 목요일",
         "map_wiped": "맵 초기화: 격주",
         "upcoming": "예정"
     },

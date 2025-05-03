@@ -12,6 +12,7 @@
         "vanilla": "原版",
         "auto_restart": "每日 04:50 (UTC+7) 自动重启",
         "full_wiped": "完整擦拭：每月第一天",
+        "full_wiped_on_first_thursday_of_the_month": "完全清除：每月第一个星期四",
         "map_wiped": "地图擦拭：每月月中",
         "upcoming": "即将推出"
     },
