@@ -44,9 +44,16 @@ export async function GET(req: Request) {
     }
 }
 
-async function processNewsFileOrDir(id: string, filePath: string): Promise<NewsResponse> {
-    const stat = await fs.stat(filePath);
-    if (stat.isDirectory()) {
+async function processNewsFileOrDir(id: string, _filePath: string): Promise<NewsResponse> {
+    let isDir = false;
+    let filePath = _filePath;
+    try {
+        (await fs.stat(filePath)).isDirectory() ? (isDir = true) : (isDir = false);
+    } catch (error) {
+        (await fs.stat(filePath+'.md')).isDirectory() ? (isDir = true, filePath = filePath+'.md') : (isDir = false, filePath = filePath+'.md');
+        console.error(error);
+    }
+    if (isDir) {
         const files = await fs.readdir(filePath);
         const content: Record<string, News> = {};
         for (const file of files) {

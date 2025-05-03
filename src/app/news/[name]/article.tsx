@@ -10,8 +10,10 @@ import { useLanguage } from '@/context/language';
 
 import "@/app/markdown.css"
 import { NewsResponse } from '@/app/api/news/[id]/route';
+import { useRouter } from 'next/navigation';
 
 function Article({ id }: { id: string }) {
+    const router = useRouter();
     const { language } = useLanguage();
     const [loading, setLoading] = React.useState(true);
     const [article, setArticle] = React.useState<News | NewsResponse[] | null>(null);
@@ -43,6 +45,17 @@ function Article({ id }: { id: string }) {
 
         fetchArticle();
     }, []);
+
+    React.useEffect(()=>{
+        if ( targetArticleLang )
+        {
+            const overrideRedirectRegex = /\[redirect:[^\]]+\]/g;
+            const overrideRedirectMatch = targetArticleLang.content.match(overrideRedirectRegex);
+            const overrideRedirect = overrideRedirectMatch ? overrideRedirectMatch[0].replace(/\[redirect:/, "").replace("]", "") : null;
+            if ( overrideRedirect )
+                router.replace(overrideRedirect);
+        }
+    }, [targetArticleLang])
 
     if ( loading )
         return <div className='flex flex-col items-center justify-center min-h-screen p-24 max-sm:p-12'><HashLoader color="#a0d3f1" size={32} /></div>
