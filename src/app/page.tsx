@@ -19,7 +19,7 @@ export default function Home() {
         exit={{ scale: 0 }}
         style={{ transitionDuration: "0.64s" }}
         className="absolute top-0 left-0 overflow-hidden w-screen h-full hero-animate"
-      ><div className="absolute w-full h-full bg-gradient-to-tr from-black/100 to-transparent"></div><Image alt="Rust Server" className="!w-screen !h-full object-cover" width={1920} height={1080} src={'/4dab83fab1c1.jpg'} /></motion.div></motion.div>
+      ><div className="absolute w-full h-full bg-gradient-to-tr from-black/100 to-transparent"></div><Image alt="Rust Server" className="!w-screen !h-full object-cover" width={1920} height={1080} src={'/jungleupdate_vineswing_02.jpg'} /></motion.div></motion.div>
       <div className="w-full max-w-6xl mx-auto text-start">
         <motion.div
           initial={{ opacity: 0, y: -50 }}
@@ -28,7 +28,7 @@ export default function Home() {
           transition={{ duration: 0.42 }}
           className="mb-4 gap-4 flex flex-wrap">
           <span className="px-4 py-2 rounded-full bg-green-800 tracking-wider text-xs">{language.data.tags.f2p}</span>
-          <span className="px-4 py-2 rounded-full bg-blue-800 text-white tracking-wider text-xs">{language.data.tags.shared_bp}</span>
+          {/* <span className="px-4 py-2 rounded-full bg-blue-800 text-white tracking-wider text-xs">{language.data.tags.shared_bp}</span> */}
           <span className="px-4 py-2 rounded-full bg-yellow-100 text-black tracking-wider text-xs">{language.data.tags.vanilla}</span>
         </motion.div>
         {
