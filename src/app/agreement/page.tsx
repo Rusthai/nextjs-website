@@ -44,7 +44,7 @@ export default function Home() {
         <div className="dark-bar-pattern absolute bottom-0 left-0 !bg-background translate-y-full w-full !z-30 rotate-180" style={{top:'unset !important'}}></div>
       </motion.div>
       <div className='mt-[36rem]'></div>
-      <motion.div className='relative w-full min-h-96 text-white font-bold px-4 py-6 group'
+      <motion.div className='relative w-full min-h-96 text-white font-bold px-4 py-6 group flex flex-col justify-center'
         initial={{ opacity: 0, x: -24 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.42, delay: 0.6 }}>
@@ -59,10 +59,10 @@ export default function Home() {
           <div className='w-full h-full absolute top-0 left-0 bg-gradient-to-bl from-transparent to-orange-900 opacity-40 group-hover:opacity-80 z-10'></div>
           <div className='w-full h-full absolute top-0 left-0 bg-gradient-to-b from-transparent to-black/90 z-20'></div>
         </motion.div>
-        <div className='w-full max-w-6xl mx-auto flex flex-col min-h-24 gap-4 p-24'>
-          <h1 className='text-6xl font-bold uppercase'>{language.data.agreement.game_rule.title}</h1>
-          <p className='text-lg text-gray-300/60 max-w-2xl max-sm:text-sm'>{language.data.agreement.game_rule.description}</p>
-          <motion.div className="flex gap-4"
+        <div className='w-full max-w-6xl mx-auto flex flex-col min-h-24 gap-4 p-24 max-md:p-6'>
+          <h1 className='text-6xl max-md:text-4xl font-bold uppercase'>{language.data.agreement.game_rule.title}</h1>
+          <p className='text-lg max-md:text-sm text-gray-300/60 max-w-2xl max-sm:text-sm'>{language.data.agreement.game_rule.description}</p>
+          <motion.div className="flex flex-wrap gap-4"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.42, delay: 0.6 }}
@@ -72,13 +72,13 @@ export default function Home() {
                 initial={{ scale: 1 }}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.99 }}
-                className="px-6 py-3 text-base font-semibold backdrop-blur-md text-orange-500 border-2 border-orange-500 bg-orange-500/10 rounded-2xl shadow-md hover:bg-orange-700/20 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50"
+                className="px-6 py-3 max-md:text-sm text-base font-semibold backdrop-blur-md text-orange-500 border-2 border-orange-500 bg-orange-500/10 rounded-2xl shadow-md hover:bg-orange-700/20 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50"
               >{language.data.agreement.learn_more}</motion.button>
             </Link>
           </motion.div>
         </div>
       </motion.div>
-      <motion.div className='relative w-full min-h-96 text-white font-bold px-4 py-6 group'
+      <motion.div className='relative w-full min-h-96 text-white font-bold px-4 py-6 group flex flex-col justify-center'
         initial={{ opacity: 0, x: -24 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
@@ -94,10 +94,10 @@ export default function Home() {
           <div className='w-full h-full absolute top-0 left-0 bg-gradient-to-br from-transparent to-green-900 opacity-40 group-hover:opacity-80 z-10'></div>
           <div className='w-full h-full absolute top-0 left-0 bg-gradient-to-b from-transparent to-black/90 z-20'></div>
         </motion.div>
-        <div className='w-full max-w-6xl mx-auto flex flex-col items-end text-end min-h-24 gap-4 p-24'>
-          <h1 className='text-6xl font-bold uppercase'>{language.data.agreement.communication.title}</h1>
-          <p className='text-lg text-gray-300/60 max-w-2xl max-sm:text-sm'>{language.data.agreement.communication.description}</p>
-          <motion.div className="flex gap-4"
+        <div className='w-full max-w-6xl mx-auto flex flex-col items-end text-end min-h-24 gap-4 p-24 max-md:p-6'>
+          <h1 className='text-6xl max-md:text-4xl font-bold uppercase'>{language.data.agreement.communication.title}</h1>
+          <p className='text-lg max-md:text-sm text-gray-300/60 max-w-2xl max-sm:text-sm'>{language.data.agreement.communication.description}</p>
+          <motion.div className="flex flex-wrap justify-end gap-4"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.42, delay: 0.6 }}
@@ -107,13 +107,13 @@ export default function Home() {
                 initial={{ scale: 1 }}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.99 }}
-                className="px-6 py-3 text-base font-semibold backdrop-blur-md text-green-500 border-2 border-green-500 bg-green-500/10 rounded-2xl shadow-md hover:bg-green-700/20 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
+                className="px-6 py-3 max-md:text-sm text-base font-semibold backdrop-blur-md text-green-500 border-2 border-green-500 bg-green-500/10 rounded-2xl shadow-md hover:bg-green-700/20 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
               >{language.data.agreement.learn_more}</motion.button>
             </Link>
           </motion.div>
         </div>
       </motion.div>
-      <motion.div className='relative w-full min-h-96 text-white font-bold px-4 py-6 group'
+      <motion.div className='relative w-full min-h-96 text-white font-bold px-4 py-6 group flex flex-col justify-center'
         initial={{ opacity: 0, x: -24 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
@@ -129,10 +129,10 @@ export default function Home() {
           <div className='w-full h-full absolute top-0 left-0 bg-gradient-to-bl from-transparent to-red-900 opacity-40 group-hover:opacity-80 z-10'></div>
           <div className='w-full h-full absolute top-0 left-0 bg-gradient-to-b from-transparent to-black/90 z-20'></div>
         </motion.div>
-        <div className='w-full max-w-6xl mx-auto flex flex-col min-h-24 gap-4 p-24'>
-          <h1 className='text-6xl font-bold uppercase'>{language.data.agreement.community.title}</h1>
-          <p className='text-lg text-gray-300/60 max-w-2xl max-sm:text-sm'>{language.data.agreement.community.description}</p>
-          <motion.div className="flex gap-4"
+        <div className='w-full max-w-6xl mx-auto flex flex-col min-h-24 gap-4 p-24 max-md:p-6'>
+          <h1 className='text-6xl max-md:text-4xl font-bold uppercase'>{language.data.agreement.community.title}</h1>
+          <p className='text-lg max-md:text-sm text-gray-300/60 max-w-2xl max-sm:text-sm'>{language.data.agreement.community.description}</p>
+          <motion.div className="flex flex-wrap gap-4"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.42, delay: 0.6 }}
@@ -142,13 +142,13 @@ export default function Home() {
                 initial={{ scale: 1 }}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.99 }}
-                className="px-6 py-3 text-base font-semibold backdrop-blur-md text-red-500 border-2 border-red-500 bg-red-500/10 rounded-2xl shadow-md hover:bg-red-700/20 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
+                className="px-6 py-3 max-md:text-sm text-base font-semibold backdrop-blur-md text-red-500 border-2 border-red-500 bg-red-500/10 rounded-2xl shadow-md hover:bg-red-700/20 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
               >{language.data.agreement.learn_more}</motion.button>
             </Link>
           </motion.div>
         </div>
       </motion.div>
-      <motion.div className='relative w-full min-h-96 text-white font-bold px-4 py-6 group'
+      <motion.div className='relative w-full min-h-96 text-white font-bold px-4 py-6 group flex flex-col justify-center'
         initial={{ opacity: 0, x: -24 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
@@ -164,10 +164,10 @@ export default function Home() {
           <div className='w-full h-full absolute top-0 left-0 bg-gradient-to-br from-transparent to-yellow-900 opacity-40 group-hover:opacity-80 z-10'></div>
           <div className='w-full h-full absolute top-0 left-0 bg-gradient-to-b from-transparent to-black/90 z-20'></div>
         </motion.div>
-        <div className='w-full max-w-6xl mx-auto flex flex-col items-end text-end min-h-24 gap-4 p-24'>
-          <h1 className='text-6xl font-bold uppercase'>{language.data.agreement.our_policies.title}</h1>
-          <p className='text-lg text-gray-300/60 max-w-2xl max-sm:text-sm'>{language.data.agreement.our_policies.description}</p>
-          <motion.div className="flex gap-4"
+        <div className='w-full max-w-6xl mx-auto flex flex-col items-end text-end min-h-24 gap-4 p-24 max-md:p-6'>
+          <h1 className='text-6xl max-md:text-4xl font-bold uppercase'>{language.data.agreement.our_policies.title}</h1>
+          <p className='text-lg max-md:text-sm text-gray-300/60 max-w-2xl max-sm:text-sm'>{language.data.agreement.our_policies.description}</p>
+          <motion.div className="flex flex-wrap justify-end gap-4"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.42, delay: 0.6 }}
@@ -177,7 +177,7 @@ export default function Home() {
                 initial={{ scale: 1 }}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.99 }}
-                className="px-6 py-3 text-base font-semibold backdrop-blur-md text-yellow-500 border-2 border-yellow-500 bg-yellow-500/10 rounded-2xl shadow-md hover:bg-yellow-700/20 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50"
+                className="px-6 py-3 max-md:text-sm text-base font-semibold backdrop-blur-md text-yellow-500 border-2 border-yellow-500 bg-yellow-500/10 rounded-2xl shadow-md hover:bg-yellow-700/20 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50"
               >{language.data.agreement.terms_of_service}</motion.button>
             </Link>
             <Link href={'/agreement/privacypolicy'}>
@@ -185,13 +185,13 @@ export default function Home() {
                 initial={{ scale: 1 }}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.99 }}
-                className="px-6 py-3 text-base font-semibold backdrop-blur-md text-yellow-500 border-2 border-yellow-500 bg-yellow-500/10 rounded-2xl shadow-md hover:bg-yellow-700/20 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50"
+                className="px-6 py-3 max-md:text-sm text-base font-semibold backdrop-blur-md text-yellow-500 border-2 border-yellow-500 bg-yellow-500/10 rounded-2xl shadow-md hover:bg-yellow-700/20 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50"
               >{language.data.agreement.privacy_policy}</motion.button>
             </Link>
           </motion.div>
         </div>
       </motion.div>
-      <motion.div className='relative w-full min-h-96 text-white font-bold px-4 py-6 group'
+      <motion.div className='relative w-full min-h-96 text-white font-bold px-4 py-6 group flex flex-col justify-center'
         initial={{ opacity: 0, x: -24 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
@@ -207,10 +207,10 @@ export default function Home() {
           <div className='w-full h-full absolute top-0 left-0 bg-gradient-to-b from-transparent to-sky-900 opacity-40 group-hover:opacity-80 z-10'></div>
           <div className='w-full h-full absolute top-0 left-0 bg-gradient-to-b from-transparent to-black/90 z-20'></div>
         </motion.div>
-        <div className='w-full max-w-6xl mx-auto flex flex-col items-center text-center min-h-24 gap-4 p-24'>
-          <h1 className='text-6xl font-bold uppercase'>{language.data.agreement.appeal.title}</h1>
-          <p className='text-lg text-gray-300/60 max-w-2xl max-sm:text-sm'>{language.data.agreement.appeal.description}</p>
-          <motion.div className="flex gap-4"
+        <div className='w-full max-w-6xl mx-auto flex flex-col items-center text-center min-h-24 gap-4 p-24 max-md:p-6'>
+          <h1 className='text-6xl max-md:text-4xl font-bold uppercase'>{language.data.agreement.appeal.title}</h1>
+          <p className='text-lg max-md:text-sm text-gray-300/60 max-w-2xl max-sm:text-sm'>{language.data.agreement.appeal.description}</p>
+          <motion.div className="flex flex-wrap gap-4"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.42, delay: 0.6 }}
@@ -220,7 +220,7 @@ export default function Home() {
                 initial={{ scale: 1 }}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.99 }}
-                className="px-6 py-3 text-base font-semibold backdrop-blur-md text-blue-500 border-2 border-blue-500 bg-blue-500/10 rounded-2xl shadow-md hover:bg-blue-700/20 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                className="px-6 py-3 max-md:text-sm text-base font-semibold backdrop-blur-md text-blue-500 border-2 border-blue-500 bg-blue-500/10 rounded-2xl shadow-md hover:bg-blue-700/20 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
               >{language.data.agreement.contact_us}</motion.button>
             </Link>
           </motion.div>
